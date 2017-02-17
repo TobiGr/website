@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://newpipe.schabi.org/sitemap.xml
