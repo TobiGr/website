@@ -1,0 +1,184 @@
+#features1 {
+    background: rgba(170, 29, 29, 0.85);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#features1 a {
+    color: white;
+}
+
+#features1 .feature-preview-item {
+
+}
+
+
+.features-background {
+    background: url('../img/bg_tiles.jpg') center center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+.features-wrapper .heading-wrapper {
+    background: #f3eff2;
+    text-align: center;
+}
+.features-wrapper .heading-wrapper h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #cd201f;
+}
+#features1 {
+    /*background: rgba(115, 115, 115, 0.88);*/
+    color: white;
+}
+#features1 .description {
+    margin: 10px 0 20px 0;
+    text-align: center;
+}
+#features1 .icon {
+    float: left;
+    position: relative;
+    top: 0;
+    left:0;
+    margin-right: 20px;
+    padding: 0;
+    height: 64px;
+    width: 64px;
+    line-height: 64px;
+    text-align: center;
+    background: white;
+    border-radius: 8px;
+    -webkit-box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
+    -moz-box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
+    box-shadow: 2px 2px 6px 4px rgba(0,0,0,0.6);
+    overflow: hidden;
+}
+#features1 .icon .fa-2x, #features1 .icon .glyphicon {
+    font-size: 31px;
+}
+#features1 .icon .text-center {
+    font-family: Arial;
+    vertical-align: -5px;
+}
+#features1 .icon p, #features1 .icon span {
+    padding: 0;
+    margin: 0;
+}
+#features1 .icon .cross-out:nth-child(odd) {
+    width: calc(91px); /* sqrt of (64px pow 4), Pythagoras' theorem */
+    transform: rotate(315deg);
+    transform-origin: 0% 0%;
+    height: 4px;
+    background: #cd201f;
+    position: absolute;
+    bottom: -2px;
+}
+#features1 .icon i, #features1 .icon img, #features1 .icon .glyphicon {
+    color: #cd201f;
+    vertical-align: middle;
+    text-align: center;
+    display: inline;
+}
+#features1 .icon img.fa {
+    height: 1.75em;
+}
+#features1 .icon .fa-icon-light {
+    -webkit-text-stroke: 2px white;
+    -webkit-font-smoothing: antialiased;
+}
+#features1 .icon .fa-lock {
+    -webkit-text-stroke: 1.5px white;
+    -webkit-font-smoothing: antialiased;
+}
+.fa-money {
+    vertical-align: 2px;
+}
+/* .fa-eye icon has more padding on the  top as on the bottom of it and is smaller than the other icons */
+#features1 .icon .fa-eye-wrapper {
+    margin-top: -2px;
+}
+#features1 .icon .fa-eye {
+    font-size: 2.5em;
+}
+#features1 .text {
+    float: left;
+    width: calc(100% - 64px - 20px);
+}
+#features1 .text p {
+    /* pull text to top of the parent div: 1.5 as factor needed because font-size: 150% (see #1-features .text strong) */
+    margin-top: calc(-4px * 1.5);
+}
+#features1 .text strong {
+    font-size: 150%;
+}
+#features1 .list-box {
+    max-width: 750px;
+}
+#features1 [class^="col"] {
+    margin-bottom: 25px;
+}
+.features-wrapper .row > div  > * {
+    height: auto;
+}
+@media (max-width: 767px){
+    .features-background {
+        height: 100vh;
+        background: none;
+    }
+    .features-wrapper {
+        background: url("../img/bg_tiles.jpg");
+        background-attachment: fixed;
+    }
+    #features1 .description {
+        margin-bottom: 10px;
+    }
+    #features1 .description {
+        margin: 20px 0 30px 0;
+    }
+}
+/* Extra small size since Bootstrap 4
+   We use Bootstrap 3 but this size was added to Bootstrap 4 for a good reason. It adresses phones with portait mode. */
+@media (max-width: 543px) {
+    #features1 .icon {
+        margin-right: 15px;
+    }
+    #features1 .text {
+        float: left;
+        width: calc(100% - 64px - 15px);
+    }
+    #features1 .text > p {
+        line-height: 64px;
+        margin: 0;
+    }
+    #features1 .text > p.description-text {
+        line-height: 1.42857143;
+        padding-top: 25px;
+        display: none;
+        text-align: left;
+    }
+}
+
+#features1 #feature-details > .container-double {
+    position: relative;
+}
+
+#features1 #feature-details > .container > div {
+    display: none;
+}
+#features1 #feature-details > .container > div > .details-image {
+    width: 25%;
+    float: left;
+    margin-right: 30px;
+}
+#features1 #feature-details > .container > div > .details-text {
+    width: calc(75% - 30px);
+
+}
+#features1 #feature-details > .container > #feature-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+}
