@@ -160,12 +160,26 @@
     }
 }
 
+#features1 #features-tiles {
+    transition: opacity 0.5s;
+}
+
+#features1 #feature-details {
+    position: relative;
+    margin-top: auto;
+    margin-bottom: auto;
+    transition: opacity 0.5s;
+    opacity: 1;
+}
+
 #features1 #feature-details > .container-double {
     position: relative;
 }
 
 #features1 #feature-details > .container > div {
     display: none;
+    opacity: 1;
+    transition: opacity 0.5s;
 }
 #features1 #feature-details > .container > div > .details-image {
     width: 25%;
@@ -181,4 +195,8 @@
     top: 0;
     right: 0;
     color: white;
+}
+
+.fadeOut {
+    opacity: 0 !important;
 }
