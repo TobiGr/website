@@ -119,8 +119,8 @@
         <div id="features-tiles">
             <div class="container container-double">
                 <div class="row">
-                    <!--<a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">-->
-                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('bit')">
+                
+                    <div class="col-sm-6 col-xs-12 feature-preview-item">
                         <div class="icon">
                             <p><i class="fa fa-play fa-2x" aria-hidden="true"></i></p>
                         </div>
@@ -129,57 +129,48 @@
                             <p class="description-text" id="ytb-videos-des">Simple way to watch videos <br class="hidden-xxs">from the site and use its features.</p>
                         </div>
                     </div>
-                    <!--</a>-->
-                    <a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">
-                        <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="collapseDescription('#ext-privacy-des')">
-                            <div class="icon">
-                                <p><i class="fa fa-lock fa-3x" aria-hidden="true"></i></p>
-                            </div>
-                            <div class="text">
-                                <p><strong>Extended Privacy</strong></p>
-                                <p class="description-text" id="ext-privacy-des">Does not use the YouTube API <br class="hidden-xxs">nor the Google Play Services.</p>
-                            </div>
+                    
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+                        <div class="icon">
+                            <p><i class="fa fa-lock fa-3x" aria-hidden="true"></i></p>
                         </div>
-                    </a>
-
-
-                    <a class="change-slide" onclick="gallery_slide(2,false)" ondblclick="gallery_slide(2,true)">
-                        <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="collapseDescription('#bg-player-des')">
-                            <div class="icon">
-                                <p><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></p>
-                            </div>
-                            <div class="text">
-                                <p><strong>Background Player</strong></p>
-                                <p class="description-text" id="bg-player-des">Use other apps with no hassle <br class="hidden-xxs">while it plays your favourite songs.</p>
-                            </div>
+                        <div class="text">
+                            <p><strong>Extended Privacy</strong></p>
+                            <p class="description-text" id="ext-privacy-des">Does not use the YouTube API <br class="hidden-xxs">nor the Google Play Services.</p>
                         </div>
-                    </a>
-                    <a class="change-slide" onclick="gallery_slide(3,false)" ondblclick="gallery_slide(3,true)">
-                        <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="collapseDescription('#download-des')">
-                            <div class="icon">
-                                <p><i class="fa fa-download fa-2x" aria-hidden="true"></i></p>
-                            </div>
-                            <div class="text">
-                                <p><strong>Download Media</strong></p>
-                                <p class="description-text" id="download-des">Simply download YouTube <br class="hidden-xxs">videos or audio to your device.</p>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
 
-
-                    <a class="change-slide" onclick="gallery_slide(4,false)" ondblclick="gallery_slide(4,true)">
-                        <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="collapseDescription('#subscribtions-des')">
-                            <div class="icon">
-                                <p><i class="fa fa-rss fa-2x" aria-hidden="true"></i></p>
-                            </div>
-                            <div class="text">
-                                <p><strong>Subscriptions</strong></p>
-                                <p class="description-text" id="subscribtions-des">Never miss new content <br class="hidden-xxs">from your favourite channels.</p>
-                            </div>
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('background')">
+                        <div class="icon">
+                            <p><i class="fa fa-volume-up fa-2x" aria-hidden="true"></i></p>
                         </div>
-                    </a>
-                    <!--<a class="change-slide" onclick="gallery_slide(1,false)" ondblclick="gallery_slide(1,true)">-->
-                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="collapseDescription('#history-des')">
+                        <div class="text">
+                            <p><strong>Background Player</strong></p>
+                            <p class="description-text" id="bg-player-des">Use other apps with no hassle <br class="hidden-xxs">while it plays your favourite songs.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+                        <div class="icon">
+                            <p><i class="fa fa-download fa-2x" aria-hidden="true"></i></p>
+                        </div>
+                        <div class="text">
+                            <p><strong>Download Media</strong></p>
+                            <p class="description-text" id="download-des">Simply download YouTube <br class="hidden-xxs">videos or audio to your device.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+                        <div class="icon">
+                            <p><i class="fa fa-rss fa-2x" aria-hidden="true"></i></p>
+                        </div>
+                        <div class="text">
+                            <p><strong>Subscriptions</strong></p>
+                            <p class="description-text" id="subscribtions-des">Never miss new content <br class="hidden-xxs">from your favourite channels.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
                         <div class="icon">
                             <p><i class="fa fa-history fa-2x" aria-hidden="true"></i></p>
                         </div>
@@ -188,34 +179,30 @@
                             <p class="description-text" id="history-des">Go back in time and <br class="hidden-xxs">enjoy your favourites again.</p>
                         </div>
                     </div>
-                    <!--</a>-->
 
-
-                    <a class="change-slide" onclick="gallery_slide(8,false)" ondblclick="gallery_slide(5,true)">
-                        <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="collapseDescription('#open-src-des')">
-                            <div class="icon">
-                                <p class="fa-eye-wrapper"><i class="fa fa-eye fa-2x" aria-hidden="true" style="font-size: 2.5em"></i></p>
-                            </div>
-                            <div class="text">
-                                <p><strong>Open Source</strong></p>
-                                <p class="description-text" id="open-src-des">How it works is not a secret.<br class="hidden-xxs">Go and check it on GitHub.</p>
-                            </div>
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+                        <div class="icon">
+                            <p class="fa-eye-wrapper"><i class="fa fa-eye fa-2x" aria-hidden="true" style="font-size: 2.5em"></i></p>
                         </div>
-                    </a>
-                    <a class="change-slide" onclick="gallery_slide(8,false)" ondblclick="gallery_slide(5,true)">
-                        <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="collapseDescription('#free-des')">
-                            <div class="icon">
-                                <p>
-                                <div class="cross-out"></div>
-                                <i class="glyphicon glyphicon-usd fa-2x" aria-hidden="true"></i>
-                                </p>
-                            </div>
-                            <div class="text">
-                                <p><strong>Free</strong></p>
-                                <p class="description-text" id="free-des">You get the whole thing for free. <br class="hidden-xxs">No in-app purchases or ads either.</p>
-                            </div>
+                        <div class="text">
+                            <p><strong>Open Source</strong></p>
+                            <p class="description-text" id="open-src-des">How it works is not a secret.<br class="hidden-xxs">Go and check it on GitHub.</p>
                         </div>
-                    </a>
+                    </div>
+                    
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+                        <div class="icon">
+                            <p>
+                            <div class="cross-out"></div>
+                            <i class="glyphicon glyphicon-usd fa-2x" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                        <div class="text">
+                            <p><strong>Free</strong></p>
+                            <p class="description-text" id="free-des">You get the whole thing for free. <br class="hidden-xxs">No in-app purchases or ads either.</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -225,17 +212,32 @@
                 <div id="feature-controls">
                     <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" onclick="toggleFeatures()" ></i>
                 </div>
-                <div id="bit">
-                        <div class="details-image">
-                            <img src="img/Privacy_written_in_tiles.jpg" class="img-responsive"/>
-                        </div>
-                        <div class="details-text container">
-                            <h3>Extended Privacy</h3>
-                            <p class="subtitle">NewPipe does not use the YouTube API nor the Google Play Services.</p>
-                            <br>
-                            <p class="text-justify">This means that we do not share any data (except the video URL) with YouTube or Google. Also, the app does not save any data from you or use services that analyse your usage behaviour.</p>
-                        </div>
-                </div>
+                
+                <div id="privacy"> 
+                    <div class="details-image">
+                        <img src="img/Privacy_written_in_tiles.jpg" class="img-responsive"/>
+                    </div>
+                    <div class="details-text container">
+                        <h3>Extended Privacy</h3>
+                        <p class="subtitle">NewPipe does not use the YouTube API nor the Google Play Services.</p>
+                        <br>
+                        <p class="text-justify">This means that we do not share any data (except the video URL) with YouTube or Google. Also, the app does not save any data from you or use services that analyse your usage behaviour.</p>
+                    </div>
+                </div> <!-- feature -->
+                
+                <div id="background">
+                    <div class="details-image">
+                        <img src="img/screenshot_4.png"  class="img-responsive"/>
+                    </div>
+                    <div class="details-text container">
+                        <h3>Background Player</h3>
+                        <p class="subtitle">Use other apps with no hassle while NewPipe plays your favourite songs.</p>
+                        <br>
+                        <p class="text-justify">We have added a background player to NewPipe. You can do whatever you want - your music keeps playing.</p>
+                        <p class="text-justify">And even better for you: we only download the audio, so you don't waste data volume.</p>
+                    </div>
+                </div> <!-- feature -->
+                
             </div>
 
         </div>
