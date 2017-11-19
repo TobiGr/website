@@ -196,7 +196,9 @@
     right: 0;
     color: white;
 }
-
+h3 .img-heading {
+    height: 32px;
+}
 .fadeOut {
     opacity: 0 !important;
 }

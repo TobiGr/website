@@ -15,6 +15,8 @@ function toggleFeatures(tile = -1){
 function hideFeatureTiles() {
     fadeOut('#features-tiles');
     featureHeight = $('#features1').outerHeight();
+    var x = $('#features-tiles').outerHeight();
+    $('#feature-details').css('max-height', x + 'px');
     //$('#features1').css('height', featureHeight + 'px');
     setTimeout(function(){$('#features1').css('height', featureHeight + 'px');},500);
     //$('#features-tiles').hide();
