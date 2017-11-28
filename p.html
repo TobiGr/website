@@ -114,12 +114,12 @@
     </div> <!-- first text box -->
 
     <div class="features-background"></div>
-    
+
     <div id="features1">
         <div id="features-tiles">
             <div class="container container-double">
                 <div class="row">
-                
+
                     <div class="col-sm-6 col-xs-12 feature-preview-item">
                         <div class="icon">
                             <p><i class="fa fa-play fa-2x" aria-hidden="true"></i></p>
@@ -129,7 +129,7 @@
                             <p class="description-text" id="ytb-videos-des">Simple way to watch videos <br class="hidden-xxs">from the site and use its features.</p>
                         </div>
                     </div>
-                    
+
                     <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
                         <div class="icon">
                             <p><i class="fa fa-lock fa-3x" aria-hidden="true"></i></p>
@@ -149,8 +149,8 @@
                             <p class="description-text" id="bg-player-des">Use other apps with no hassle <br class="hidden-xxs">while it plays your favourite songs.</p>
                         </div>
                     </div>
-                    
-                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('download')">
                         <div class="icon">
                             <p><i class="fa fa-download fa-2x" aria-hidden="true"></i></p>
                         </div>
@@ -160,7 +160,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('subscriptions')">
                         <div class="icon">
                             <p><i class="fa fa-rss fa-2x" aria-hidden="true"></i></p>
                         </div>
@@ -169,8 +169,8 @@
                             <p class="description-text" id="subscribtions-des">Never miss new content <br class="hidden-xxs">from your favourite channels.</p>
                         </div>
                     </div>
-                    
-                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('history')">
                         <div class="icon">
                             <p><i class="fa fa-history fa-2x" aria-hidden="true"></i></p>
                         </div>
@@ -180,7 +180,7 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('opensource')">
                         <div class="icon">
                             <p class="fa-eye-wrapper"><i class="fa fa-eye fa-2x" aria-hidden="true" style="font-size: 2.5em"></i></p>
                         </div>
@@ -189,8 +189,8 @@
                             <p class="description-text" id="open-src-des">How it works is not a secret.<br class="hidden-xxs">Go and check it on GitHub.</p>
                         </div>
                     </div>
-                    
-                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('privacy')">
+
+                    <div class="col-sm-6 col-xs-12 feature-preview-item" onclick="toggleFeatures('opensource')">
                         <div class="icon">
                             <p>
                             <div class="cross-out"></div>
@@ -202,7 +202,7 @@
                             <p class="description-text" id="free-des">You get the whole thing for free. <br class="hidden-xxs">No in-app purchases or ads either.</p>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div>
@@ -212,7 +212,7 @@
                 <div id="feature-controls">
                     <i class="fa fa-lg fa-times" aria-hidden="true" data-dismiss="modal" onclick="toggleFeatures()" ></i>
                 </div>
-                
+
                 <div id="privacy"> 
                     <div class="details-image">
                         <img src="img/Privacy_written_in_tiles.jpg" class="img-responsive"/>
@@ -224,10 +224,10 @@
                         <p class="text-justify">This means that we do not share any data (except the video URL) with YouTube or Google. Also, the app does not save any data from you or use services that analyse your usage behaviour.</p>
                     </div>
                 </div> <!-- feature -->
-                
+
                 <div id="background">
                     <div class="details-image">
-                        <img src="img/screenshot_4.png"  class="img-responsive"/>
+                        <img src="img/screenshot_4.png" class="img-responsive"/>
                     </div>
                     <div class="details-text container">
                         <h3><!--<i class="fa fa-volume-up"></i>--><img src="img/ic_headset_white_48px.svg" class="img-heading" />&nbsp;&nbsp;Background Player</h3>
@@ -237,7 +237,105 @@
                         <p class="text-justify">And even better for you: we only download the audio, so you don't waste data volume.</p>
                     </div>
                 </div> <!-- feature -->
-                
+
+                <div id="download">
+                    <div class="details-image image-slideshow">
+                        <img src="img/screenshot_7.png" class="active img-responsive" />
+                        <img src="img/screenshot_8.png" class="img-responsive"/>
+                    </div>
+                    <div class="details-text container">
+                        <h3>Download Media</h3>
+                        <p class="subtitle">Simply download YouTube videos or audio to your device</p>
+                        <br>
+                        <p class="text-justify">With NewPipe you can not only watch YouTube videos, but also download them. The app offers different file formats and resolutions for the audio and videos.</p>
+                        <p class="text-justify">The download centre provides you a good overview of your downloads and their progress.</p>
+                    </div>
+                </div>
+
+                <div id="subscriptions">
+                    <div class="details-image image-slideshow">
+                        <img src="img/screenshot_6.png" class="active img-responsive" />
+                        <img src="img/screenshot_12.png" class="img-responsive"/>
+                    </div>
+                    <div class="details-text container">
+                        <h3>Subscriptions</h3>
+                        <p class="subtitle">Never miss videos from your favourite channels again.</p>
+                        <br>
+                        <p class="text-justify">You can now follow channels with just one click. Keep up to date with your favourite channels. With just a few clicks we'll assemble all the news for you.</p>
+                        <p class="text-justify">We save your subscriptions locally. That means you can use this feature - just like the whole app - without a Google Account.</p>
+                    </div>
+                </div>
+
+                <div id="popup">
+                    <div class="details-image">
+                        <img src="img/screenshot_5.png" class="img-responsive"/>
+                    </div>
+                    <div class="details-text container">
+                        <h3>Video Pop-Up</h3>
+                        <p class="subtitle">See your videos everywhere</p>
+                        <br>
+                        <p class="text-justify">Want to check your emails while watching a video? No problem!</p>
+                        <p class="text-justify">With the pop-up mode you can do whatever you want and keep watching videos. The pop-up is movable and resizable — it won't be in your way. We promise.</p>
+                    </div>
+                </div>
+
+                <div id="4k">
+                    <div class="details-image">
+                        <img src="img/screenshot_2.png" class="img-responsive"/>
+                    </div>
+                    <div class="details-text container">
+                        <h3>4K Support</h3>
+                        <p class="subtitle">Enjoy your videos in brilliant quality</p>
+                        <br>
+                        <p class="text-justify">You have one of these super high-resolution phones? Good for you! With NewPipe you can enjoy videos with up to 4K and 60fps and get the best out of your hardware.</p>
+                        <p class="text-justify">You just have a normal phone? No problem! NewPipe offers you tons of resolutions and codecs. Choose the one that fits to your device and save data volume.</p>
+                    </div>
+                </div>
+
+                <div id="history">
+                    <div class="details-image image-slideshow">
+                        <img src="img/screenshot_2.png" class="active img-responsive" />
+                        <img src="img/screenshot_3.png" class="img-responsive"/>
+                    </div>
+                    <div class="details-text container">
+                        <h3>History</h3>
+                        <p class="subtitle">Go back in time and enjoy your favourites again.</p>
+                        <br>
+                        <p class="text-justify">Our costumizable history gives you control of what you keep and what we use to improve your experience in NewPipe. Your history helps you with your next search to find even more excatly what you want. Because we care about your privacy, it's always possible to delete your whole history or only single events from your search and watch history.</p>
+                        <p class="text-justify">The history makes it also possible for you to find a recently watched video to enjow it again.</p>
+                    </div>
+                </div>
+
+                <div id="themes">
+                    <div class="details-image image-slideshow">
+                        <img src="img/screenshot_2.png" class="active img-responsive" />
+                        <img src="img/screenshot_3.png" class="img-responsive"/>
+                    </div>
+                    <div class="details-text container">
+                        <h3>Multiple Themes</h3>
+                        <p class="subtitle">Customize NewPipe</p>
+                        <br>
+                        <p class="text-justify">Watch videos with NewPipe whenever you want: at day or at night.</p>
+                        <p class="text-justify">To increase your comfort at night, NewPipe has a dark mode. Go to settings and easily turn the dark mode on. It's fancy and good for your eyes. You want it still darker? Then you must try our black theme!</p>
+                    </div>
+                </div>
+
+                <div id="opensource">
+                    <div class="details-image">
+                        <a href="https://github.com/TeamNewPipe/NewPipe/" target="_blank">
+                            <img src="img/GitHub.png" class="banner img-responsive" />
+                        </a>
+                    </div>
+                    <div class="details-text container">
+                        <h3>Open Source</h3>
+                        <p class="subtitle">How it works is not a secret</p>
+                        <br>
+                        <p class="text-justify">NewPipe does not use the YouTube API nor the Google Play Services. This is one reason why the app is free of proprietary software.</p>
+                        <p class="text-justify">You don't believe us? NewPipe's full source code is available on GitHub. Go and check it out. The app is developed by a small but growing community. If you have found an issue (we don't hope so) or want to help us develop new features, get in touch with us.</p>
+                        <p>Our awesome community and your <a href="/dontate" class="red">donations</a> keep NewPipe free.</p>
+                    </div>
+                </div>
+
             </div>
 
         </div>

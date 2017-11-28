@@ -18,7 +18,10 @@ function hideFeatureTiles() {
     var x = $('#features-tiles').outerHeight();
     $('#feature-details').css('max-height', x + 'px');
     //$('#features1').css('height', featureHeight + 'px');
-    setTimeout(function(){$('#features1').css('height', featureHeight + 'px');},500);
+    if($(window).outerWidth > 767) 
+        setTimeout(function(){$('#features1').css('height', featureHeight + 'px');},500);
+    else
+        setTimeout(function(){$('#features1').css('height', 'auto');},500);
     //$('#features-tiles').hide();
 }
 

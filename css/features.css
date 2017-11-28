@@ -1,16 +1,23 @@
 #features1 {
-    background: rgba(170, 29, 29, 0.85);
+    background: rgba(170, 29, 29, 0.9);
     padding-top: 30px;
     padding-bottom: 30px;
 }
 #features1 a {
     color: white;
 }
-
-#features1 .feature-preview-item {
-
+#features1 [onclick] {
+    cursor: pointer;
 }
 
+@media (min-width: 768px) {
+    #features1 .feature-preview-item:nth-child(2n) {
+        padding-left: 0;
+    }
+    #features1 .text > p.description-text {
+        font-weight: 500;
+    }
+}
 
 .features-background {
     background: url('../img/bg_tiles.jpg') center center;
@@ -185,6 +192,12 @@
     width: 25%;
     float: left;
     margin-right: 30px;
+}
+#features1 #feature-details .details-image.image-slideshow img {
+    display: none;
+}
+#features1 #feature-details .details-image.image-slideshow img.active {
+    display: inline;
 }
 #features1 #feature-details > .container > div > .details-text {
     width: calc(75% - 30px);
