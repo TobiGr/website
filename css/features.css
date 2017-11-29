@@ -1,7 +1,16 @@
+#features-heading {
+    background: #f3eff2;
+    text-align: center;
+}
+#features-heading h3 {
+    color: #cd201f;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
 #features1 {
     background: rgba(170, 29, 29, 0.9);
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0;
+    padding-bottom: 10px;
 }
 #features1 a {
     color: white;
@@ -41,7 +50,7 @@
     color: white;
 }
 #features1 .description {
-    margin: 10px 0 20px 0;
+    margin: 15px 0 20px 0;
     text-align: center;
 }
 #features1 .icon {
