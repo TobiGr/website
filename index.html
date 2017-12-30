@@ -17,7 +17,15 @@
 
     <!-- JQuery -->
     <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- JQuery Mobile -->
+    <script>
+    /*$(document).bind('mobileinit',function(){
+        $.mobile.keepNative = "#features2";
+    });*/
+
+    </script>
+    <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.jsX"></script>
 
     <!-- Bootstrap -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -439,61 +447,246 @@
     <div id="features2">
         <div class="container container-double">
             <div class="row is-flex">
-                <!--<div class="col-md-6">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="icon">
-                                <h3 class="red"><i class="fa fa-bolt"></i> Fast</h3>
+                <div class="col-md-9 feature2-detail active" id="lightweight">
+                    <h3>Lightweight</h3>
+                    <div class="feature2-media"></div>
+                    <div class="feature2-description">
+                            <div class="row is-flex">
+                                <div class="col-md-6">
+                                    <div class="description">
+                                        <h3>Fast</h3>
+                                    </div>
+                                    <div class="icon">
+                                        <i class="fa fa-3x fa-bolt red"></i>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="icon">
+                                        <i class="fa fa-3x fa-bolt red"></i>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="icon">
+                                        <i class="fa fa-3x fa-bolt red"></i>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="icon">
+                                        <i class="fa fa-3x fa-battery-three-quarters red"></i>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="icon">
+                                        <i class="fa fa-3x fa-wifi red"></i>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="progress">
-                                <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="downloads" >
+                    <h3>Downloads</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_02.png" class="img-responsive active" />
+                        <!--<img src="/img/screenshots/shot_03.png" class="img-responsive" />-->
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="privacy" >
+                    <h3>Extended Privacy</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="background" >
+                    <h3>Background Player</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="popup" >
+                    <h3>Popup Player</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="subscriptions" >
+                    <h3>Subscriptions</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="history" >
+                    <h3>History</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="code" >
+                    <h3>Background Player</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="price" >
+                    <h3>Background Player</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-9 feature2-detail" id="4k" >
+                    <h3>Background Player</h3>
+                    <div class="feature2-media">
+                        <img src="/img/screenshots/shot_01.png" class="img-responsive" />
+                    </div>
+                    <div class="feature2-description">
+                        <p><strong>Customize your download:</strong></p>
+                        <ul>
+                            <li>Set title</li>
+                            <li>Choose between video or audio download</li>
+                            <li>Select the most suitably file format</li>
+                            <li>Download the resolution you need</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Sidebar -->
+                <div class="col-md-3" id="features-sidebar">
+                    <div class="list-group">
+                        <a href="#lightweight">
+                            <div class="list-group-item active">
+                                <span class="icon"><i class="fa fa-bolt"></i></span> Lightweight
                             </div>
-                        </div>
-                    </div>
-                </div>-->
-                <div class="col-md-6">
-                    <div class="description">
-                        <h3>Fast</h3>
-                    </div>
-                    <div class="icon">
-                        <i class="fa fa-3x fa-bolt red"></i>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="icon">
-                        <i class="fa fa-3x fa-bolt red"></i>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="icon">
-                        <i class="fa fa-3x fa-bolt red"></i>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="icon">
-                        <i class="fa fa-3x fa-battery-three-quarters red"></i>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="icon">
-                        <i class="fa fa-3x fa-wifi red"></i>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-newpipe" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                        </a>
+                        <a href="#downloads">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-download"></i></span> Downloads
+                            </div>
+                        </a>
+                        <a href="#privacy">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-lock"></i></span> Extended Privacy
+                            </div>
+                        </a>
+                        <a href="#background">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-volume-up"></i></span> Background Player
+                            </div>
+                        </a>
+                        <a href="#popup">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-download"></i></span> Popup Player
+                            </div>
+                        </a>
+                        <a href="#subscriptions">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-feed"></i></span> Subscriptions
+                            </div>
+                        </a>
+                        <a href="#history">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-history"></i></span> History
+                            </div>
+                        </a>
+                        <a href="#code">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-code"></i></span> Open Source
+                            </div>
+                        </a>
+                        <a href="#price">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-dollar"></i></span> Free
+                            </div>
+                        </a>
+                        <a href="#4k">
+                            <div class="list-group-item">
+                                <span class="icon"><i class="fa fa-4k">4K</i></span> High Quality
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
