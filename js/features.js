@@ -23,6 +23,7 @@ $('#features2').click(function(){
 $(window).on("orientationchange load resize", function () {
     if ($(window).width() > 767 && $(window).height() < 665 + 60) {
         $('.feature2-media').css('width', 'calc(33% - 15px)');
+        $('.feature2-description').css('width', 'calc(66% - 15px)');
     }
 });
 

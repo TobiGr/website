@@ -600,13 +600,14 @@ img.border-white {
     margin-bottom: 30px;
 }
 #features2 .feature2-detail .feature2-media {
+    position: relative;
     width: calc(50% - 15px);
     margin-right: 15px;
     float: left;
 }
 #features2 .feature2-detail .feature2-description {
+    position: relative;
     float: left;
-    width: calc(50% - 15px);
     margin-left: 15px;
 }
 #features2 .icon {
@@ -631,6 +632,29 @@ img.border-white {
     font-weight: 600;
     width: 100%;
     text-align: center;
+}
+#features2 .feature2-description a {
+    color: #cd201f;
+}
+#features2 .feature2-description .text-success {
+    color: #29a400;
+}
+#features2 .feature2-description ul {
+    list-style: none;
+    padding-left: 15px;
+}
+#features2 .feature2-description ul > li {
+    padding-left: 15px;
+    line-height: 2;
+    text-indent: -25px;
+}
+#features2 .feature2-description ul > li:before {
+    content: "\f00c"; /* FontAwesome Unicode for check icon */
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: 0;
+    padding-left: 25px;
+    height: 100%;
 }
 #features2 .progress {
     width: calc(100% - 84px);
