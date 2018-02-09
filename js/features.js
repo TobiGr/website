@@ -3,8 +3,8 @@
  * @type {Array}
  */
 var features = [
-    "lightweight", "downloads", "privacy", "background",
-    "popup", "subscriptions", "history", "code", "price", "4k"];
+    "lightweight", "downloads", "privacy", "background", "popup",
+    "subscriptions", "bookmarks", "history", "code", "price", "4k"];
 
 $('#features2').click(function(){
     $('#features2 .progress-bar').addClass('active');
