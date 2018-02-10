@@ -656,6 +656,9 @@ img.border-white {
     padding-left: 25px;
     height: 100%;
 }
+#features2 .feature2-description ul > li.heart:before {
+    content: "\f004";
+}
 #features2 .progress {
     width: calc(100% - 84px);
     float: left;
