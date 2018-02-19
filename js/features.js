@@ -4,13 +4,14 @@
  */
 var features = [
     "lightweight", "downloads", "privacy", "background", "popup",
-    "subscriptions", "bookmarks", "history", "code", "price", "4k"];
-
-$('#features2').click(function(){
+    "subscriptions", "bookmarks", "history", "code", "price"];
+var currentFeature = -1;
+var isFullscreen = false;
+/*$('#features2').click(function(){
     $('#features2 .progress-bar').addClass('active');
 });
 
-/*$(window).on("orientationchange load resize", function () {
+$(window).on("orientationchange load resize", function () {
     if ($(window).width() > 544) {
         $('#features2 *').attr('data-role', 'none');
     }
@@ -19,12 +20,36 @@ $('#features2').click(function(){
 /*$("body").page({
     keepNative: "#features2 *"
 });*/
+var isActive = false;
+$(window).on("orientationchange load resize", function () {
+    if ($(window).width() > 767) {
+        if (!isActive) {
+            if (currentFeature == -1) currentFeature = 0;
+            $('#' + features[currentFeature]).addClass('active');
+            isActive = true;
+        }
+        if (isFullscreen) {
+
+        }
+    } else {
+        if (isActive) {
+            if (currentFeature == -1) currentFeature = 0;
+            $('#' + features[currentFeature]).removeClass('active');
+            isActive = false;
+        }
+    }
+});
 
 $(window).on("orientationchange load resize", function () {
     if ($(window).width() > 767 && $(window).height() < 665 + 60) {
         $('.feature2-media').css('width', 'calc(33% - 15px)');
         $('.feature2-description').css('width', 'calc(66% - 15px)');
     }
+});
+
+$('.feature2-close-detail').click(function () {
+   $(this).parent().removeClass('active');
+   $('body').removeClass('feature-fullscreen');
 });
 
 /**
@@ -36,6 +61,14 @@ $('#features-sidebar .list-group a').click(function (event) {
     var hash = $(this).attr('href');
     $('.feature2-detail.active').removeClass('active');
     $(hash).addClass('active');
+    currentFeature = features.indexOf(hash.substr(1));
+    if ($("body").outerWidth() > 767) {
+
+
+    } else {
+        $("body").addClass("feature-fullscreen");
+        isFullscreen = true;
+    }
     history.pushState(null, null, hash);
 });
 
@@ -48,7 +81,12 @@ $(window).on('hashchange load', function(e){
     if (hash != "" && hash != null && hash != "undefined"
         && features.includes(hash.substr(1))
         && !$(hash).hasClass('active')) {
+        if ($(window).width() <= 767) $('body').addClass('feature-fullscreen');
         $('.feature2-detail.active').removeClass('active');
         $(hash).addClass('active');
+        currentFeature = features.indexOf(hash.substr(1));
     }
 });
+
+/* TODO Write methods for toggling .active class, feature-fullscreen detection at resize, back-button behavior
+ */
