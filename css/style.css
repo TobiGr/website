@@ -677,10 +677,12 @@ img.border-white {
 #features2 .feature2-close-detail {
     display: none;
     position: absolute;
-    top: 41px;
-    left: 30px;
+    top: 24px;
+    left: 15px;
     font-size: 20px;
     color: #cd201f;
+    padding: 15px;
+    cursor: pointer;
 }
 @media (max-width: 767px) {
     #features2 .feature2-detail.active .feature2-close-detail {

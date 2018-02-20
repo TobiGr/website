@@ -50,10 +50,11 @@ $(window).on("orientationchange load resize", function () {
 });*/
 
 $('.feature2-close-detail').click(function () {
-   $(this).parent().removeClass('active');
-   $('body').removeClass('feature-fullscreen');
-   $(document).trigger('bodyClassChanged');
-   history.pushState(null, null, "#"); // make sure to work with currentFeature
+    $("#features-sidebar .list-group .active").removeClass('active');
+    $(this).parent().removeClass('active');
+    $('body').removeClass('feature-fullscreen');
+    $(document).trigger('bodyClassChanged');
+    history.pushState(null, null, "#"); // make sure to work with currentFeature
 });
 
 /**
@@ -92,7 +93,7 @@ $(window).on('hashchange load', function(e){
         $(hash).addClass('active');
         currentFeature = features.indexOf(hash.substr(1));
     } else if(hash == "" && $(window).width() < 767) { // enables hardware back button or back key on keyboard to close the detail view
-        $('.list-group > .active').removeClass('active');
+        $("#features-sidebar .list-group .active").removeClass('active');
         $('.feature2-detail.active').removeClass('active');
         $('body').removeClass('feature-fullscreen');
         $(document).trigger('bodyClassChanged');
