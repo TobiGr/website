@@ -572,6 +572,9 @@ img.border-white {
 #features2 #features-sidebar {
     background: #E2DEE0;
     display: block;
+    /* padding 0 to draw the separators, that is why .list-group-item has a double padding of 30px on each side */
+    padding-left: 0;
+    padding-right: 0;
 }
 #features2 #features-sidebar .list-group {
     width: 100%;
@@ -584,11 +587,13 @@ img.border-white {
     background: none;
     border: none;
     color: #cd201f;
-    padding-top: 17px;
-    padding-bottom: 17px;
+    padding: 17px 30px;
 }
-#features2 #features-sidebar. list-group .list-group-item.active {
-    color: #cd201f;
+#features2 #features-sidebar .list-group > .active > .list-group-item {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 #features2 #features-sidebar .list-group .list-group-item span.icon {
     width: 25px;

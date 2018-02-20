@@ -63,6 +63,8 @@ $('.feature2-close-detail').click(function () {
 $('#features-sidebar .list-group a').click(function (event) {
     event.preventDefault();
     var hash = $(this).attr('href');
+    $('.list-group > .active').removeClass('active');
+    $(this).addClass('active');
     $('.feature2-detail.active').removeClass('active');
     $(hash).addClass('active');
     currentFeature = features.indexOf(hash.substr(1));
@@ -89,7 +91,8 @@ $(window).on('hashchange load', function(e){
         $('.feature2-detail.active').removeClass('active');
         $(hash).addClass('active');
         currentFeature = features.indexOf(hash.substr(1));
-    } else if(hash == "" && $(window).width() < 767) {
+    } else if(hash == "" && $(window).width() < 767) { // enables hardware back button or back key on keyboard to close the detail view
+        $('.list-group > .active').removeClass('active');
         $('.feature2-detail.active').removeClass('active');
         $('body').removeClass('feature-fullscreen');
         $(document).trigger('bodyClassChanged');
