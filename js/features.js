@@ -7,6 +7,8 @@ var features = [
     "subscriptions", "bookmarks", "history", "code", "price"];
 var currentFeature = -1;
 var isFullscreen = false;
+var isActive = false;
+
 /*$('#features2').click(function(){
     $('#features2 .progress-bar').addClass('active');
 });
@@ -20,7 +22,6 @@ $(window).on("orientationchange load resize", function () {
 /*$("body").page({
     keepNative: "#features2 *"
 });*/
-var isActive = false;
 $(window).on("orientationchange load resize", function () {
     if ($(window).width() > 767) {
         if (!isActive) {
@@ -35,21 +36,23 @@ $(window).on("orientationchange load resize", function () {
         if (isActive) {
             if (currentFeature == -1) currentFeature = 0;
             $('#' + features[currentFeature]).removeClass('active');
+            $('body').removeClass('feature-fullscreen');
             isActive = false;
         }
     }
 });
 
-$(window).on("orientationchange load resize", function () {
+/*$(window).on("orientationchange load resize", function () {
     if ($(window).width() > 767 && $(window).height() < 665 + 60) {
         $('.feature2-media').css('width', 'calc(33% - 15px)');
         $('.feature2-description').css('width', 'calc(66% - 15px)');
     }
-});
+});*/
 
 $('.feature2-close-detail').click(function () {
    $(this).parent().removeClass('active');
    $('body').removeClass('feature-fullscreen');
+   //history.pushState(null, null, "#"); // make sure to work with currentFeature
 });
 
 /**
@@ -88,5 +91,4 @@ $(window).on('hashchange load', function(e){
     }
 });
 
-/* TODO Write methods for toggling .active class, feature-fullscreen detection at resize, back-button behavior
- */
+/* TODO Write methods for toggling .active class, feature-fullscreen detection at resize, back-button behavior */
