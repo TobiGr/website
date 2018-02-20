@@ -52,7 +52,8 @@ $(window).on("orientationchange load resize", function () {
 $('.feature2-close-detail').click(function () {
    $(this).parent().removeClass('active');
    $('body').removeClass('feature-fullscreen');
-   //history.pushState(null, null, "#"); // make sure to work with currentFeature
+   $(document).trigger('bodyClassChanged');
+   history.pushState(null, null, "#"); // make sure to work with currentFeature
 });
 
 /**
@@ -88,6 +89,11 @@ $(window).on('hashchange load', function(e){
         $('.feature2-detail.active').removeClass('active');
         $(hash).addClass('active');
         currentFeature = features.indexOf(hash.substr(1));
+    } else if(hash == "" && $(window).width() < 767) {
+        $('.feature2-detail.active').removeClass('active');
+        $('body').removeClass('feature-fullscreen');
+        $(document).trigger('bodyClassChanged');
+        currentFeature = -1;
     }
 });
 
