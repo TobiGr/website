@@ -118,7 +118,6 @@ img.border-white {
 }
 .header-background {
     background: url('../img/background_header.png') center center;
-    background-size: cover;
     position: fixed;
     width: 100%;
     top: 0;
@@ -183,7 +182,7 @@ img.border-white {
     width: calc(328 / 553 * 350px);
     background: transparent;
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .header-box-wrapper .pull-left {
         float: none !important;
     }
@@ -202,7 +201,10 @@ img.border-white {
         right: 0;
     }
 }
-@media (min-width: 768px){
+@media (min-width: 768px) {
+    .header-background {
+        background-size: cover;
+    }
     .header-text {
         margin-bottom: 100px;
         width: auto;

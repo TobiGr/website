@@ -32,3 +32,7 @@ $(window).resize(function(e) {
 
 parallax_reset();
 if ($(window).width() > 767) parallax();
+
+$(document).on('bodyClassChanged', function() {
+    parallax_reset();
+})
