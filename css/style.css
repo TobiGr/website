@@ -774,7 +774,19 @@ body.modal-open {
         padding-right: 15px;
     }
 }
-
+#main-page #donate {
+    border-top: 3px solid #CD201F;
+    padding: 100px 0 130px;
+    background: url("/img/background_header.png") center center;
+    background-size: cover;
+    color: white;
+}
+#main-page #donate .donate {
+    border: 3px solid white;
+}
+#main-page #donate .col-md-4:first-child h3 {
+    text-align: right;
+}
 
 /* News */
 
@@ -841,6 +853,9 @@ body.modal-open {
     height: 90px;
     margin: 0;
     padding: 0;
+}
+#main-page .footer {
+    border-top: 3px solid white;
 }
 
 
