@@ -117,7 +117,8 @@ img.border-white {
     color: white;
 }
 .header-background {
-    background: url('../img/background_header.png') center center;
+    background: url('../img/bg_rectangles_full.png') center center;
+    background-size: cover;
     position: fixed;
     width: 100%;
     top: 0;
@@ -777,7 +778,7 @@ body.modal-open {
 #main-page #donate {
     border-top: 3px solid #CD201F;
     padding: 100px 0 130px;
-    background: url("/img/background_header.png") center center;
+    background: url("/img/bg_rectangles.png") center center;
     background-size: cover;
     color: white;
 }
