@@ -118,6 +118,101 @@
         </div>
     </div> <!-- first text box -->
 
+    <div id="info">
+        <div class="container container-double">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="info-icon youtube"></div>
+                    <p class="info-title">YouTube</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-icon">
+                        <span><i class="fa fa-download"></i></span>
+                    </div>
+                    <p class="info-title">Download</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="info-icon soundcloud"></div>
+                    <p class="info-title">SoundCloud</p>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="info-table" id="info-download">
+                        <div class="row is-flex">
+                            <div class="col-md-4">
+                                <h4>Stable</h4>
+                                <div class="info">
+                                    <p class="info-version" id="stable-version">0.12.0</p>
+                                    <p><strong>New</strong></p>
+                                    <ul id="stable-new"></ul>
+                                </div>
+                                <p class="info-action">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe.beta/">
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="col-md-4 info-middle">
+                                <!-- color: #1976d2 -->
+                                <h4>F-Droid</h4>
+                                <div class="info">
+                                    <p class="info-version" id="table-version"></p>
+
+                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner" role="listbox">
+                                            <div class="item active">
+                                                <p><a href="https://f-droid.org/">F-Droid</a> is a trusted catalogue of Free and Open Source applications for Android.</p>
+                                            </div>
+                                            <div class="item">
+                                                <p>Install the F-Droid app to get notified about updates. It enables you to download and update them too.</p>
+
+                                            </div>
+                                            <div class="item">
+                                                <p>erererererere  ererererer erererer ere ererer ereerer</p>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                        </ol>
+
+                                    </div>
+                                </div>
+                                <p class="info-action">
+                                    <a href="https://f-droid.org/packages/org.fdroid.fdroid/">
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="col-md-4">
+                                <h4>Beta</h4>
+                                <div class="info">
+                                    <p class="info-version" id="beta-version">1.0.0</p>
+                                    <p><strong>New</strong></p>
+                                    <ul id="beta-new"></ul>
+                                </div>
+                                <p class="info-action">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/">
+                                        <i class="fa fa-download"></i>
+                                    </a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- parallax background for features -->
     <div class="features-background"></div>
 
@@ -503,6 +598,18 @@
 
     <!-- Script for gallery animations -->
     <script src="{{ site.baseurl }}/js/gallery.js"></script>
+
+    <script src="/js/infoView.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("features2").infoView({
+                view: "#"
+            });
+        });
+
+        $('.carousel').carousel();
+
+    </script>
 
     <!-- Load and play animation on medium and large screens -->
     <script>
