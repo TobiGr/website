@@ -124,21 +124,43 @@
     <div id="info">
         <div class="container container-double">
             <div class="row">
-                <div class="col-md-4">
-                    <div class="info-icon youtube"></div>
+                <div class="col-xs-6 col-sm-4">
+                    <div class="info-icon youtube">
+                        <svg viewBox="0 0 140 140">
+                            <g>
+                                <circle r="68" cx="50%" cy="50%" class="circle-back" />
+                            </g>
+                        </svg>
+                    </div>
                     <p class="info-title">YouTube</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="info-icon">
-                        <span><i class="fa fa-download"></i></span>
+                <div class="col-xs-6 col-sm-push-4 col-sm-4">
+                    <div class="info-icon soundcloud">
+                        <svg viewBox="0 0 140 140" preserveAspectRatio="xMinYMin meet">
+                            <g>
+                                <circle r="68" cx="50%" cy="50%" class="circle-back" />
+                            </g>
+                        </svg>
                     </div>
-                    <p class="info-title">Download</p>
-                </div>
-                <div class="col-md-4">
-                    <div class="info-icon soundcloud"></div>
                     <p class="info-title">SoundCloud</p>
                 </div>
+                <div class="col-xs-6 col-xs-offset-3 col-sm-pull-4 col-sm-offset-0 col-sm-4">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 140 140" preserveAspectRatio="xMinYMin meet">
+                            <g>
+                                <circle r="68" cx="50%" cy="50%" class="circle-back" />
+                                <text x="50%" y="50%" text-anchor="middle" dy="0.32em">&#xf019;</text>
+                            </g>
+                        </svg>
+                    </div><!--
+                    <div class="info-circle">
+                        <span><i class="fa fa-download"></i></span>
+                    </div>-->
+                    <p class="info-title">Download</p>
+                </div>
 
+            </div>
+            <div class="row">
                 <div class="col-lg-12">
                     <div class="info-table" id="info-download">
                         <div class="row is-flex">
@@ -150,7 +172,7 @@
                                     <ul id="stable-new"></ul>
                                 </div>
                                 <p class="info-action">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe.beta/">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/">
                                         <i class="fa fa-download"></i>
                                     </a>
                                 </p>
@@ -162,7 +184,7 @@
                                 <div class="info">
                                     <p class="info-version" id="table-version"></p>
 
-                                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                    <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="9000">
 
                                         <!-- Wrapper for slides -->
                                         <div class="carousel-inner" role="listbox">
@@ -174,17 +196,31 @@
 
                                             </div>
                                             <div class="item">
-                                                <p>erererererere  ererererer erererer ere ererer ereerer</p>
+                                                <p>F-Droid also guarantees the best possible privacy and therefore does not track its users. <br />
+                                                   At this point we would like to thank F-Droid for providing the downloads.
+                                                </p>
 
                                             </div>
                                         </div>
 
                                         <!-- Indicators -->
                                         <ol class="carousel-indicators">
-                                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                            <li data-target="#f-droid-carousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#f-droid-carousel" data-slide-to="1"></li>
+                                            <li data-target="#f-droid-carousel" data-slide-to="2"></li>
                                         </ol>
+
+                                        <!-- Controls: not displayed but needed to get preventJumpingPage() working
+                                             Pausing the Carousel won't work without controls. Don't ask me why :)
+                                         -->
+                                        <a class="left carousel-control" href="#f-droid-carousel" role="button" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#f-droid-carousel" role="button" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
 
                                     </div>
                                 </div>
@@ -203,7 +239,7 @@
                                     <ul id="beta-new"></ul>
                                 </div>
                                 <p class="info-action">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe.beta/">
                                         <i class="fa fa-download"></i>
                                     </a>
                                 </p>
@@ -633,15 +669,42 @@
     <script src="{{ site.baseurl }}/js/features.js"></script>
 
     <script src="/js/infoView.js"></script>
+
+    <!-- Info scripts -->
     <script>
-        $(document).ready(function(){
+        /*$(document).ready(function(){
             $("features2").infoView({
                 view: "#"
             });
+        });*/
+        $(document).ready(function(){
+            var $fdroid = $("#f-droid-carousel");
+            $fdroid.carousel();
+            var paused = false;
+
+            /**
+             * Prevent jumping page on small screens
+             * caused by a not-fixed height of the F-Droid carousel
+             */
+            function preventJumpingPage() {
+                var w = $(window).width(),
+                    wTop = $(window).scrollTop(),
+                    fTop = $fdroid.offset().top,
+                    fHeight = $fdroid.outerHeight();
+
+                if (w < 768 && !paused && wTop > fTop + fHeight) { // pause cycling when slides are not displayed
+                    paused = true;
+                    $fdroid.carousel('pause');
+                } else if (w < 768 && paused && wTop <= fTop + fHeight // enable cycling when they are displayed
+                    || w >= 768 && paused) { // enable cycling when window got resized
+                    paused = false;
+                    $fdroid.carousel('cycle');
+                }
+            }
+            $(window).scroll(preventJumpingPage);
+            $(window).resize(preventJumpingPage);
+            preventJumpingPage();
         });
-
-        $('.carousel').carousel();
-
     </script>
 
     <!-- Load and play animation on medium and large screens -->
