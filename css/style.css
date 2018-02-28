@@ -426,46 +426,18 @@ img.border-white {
 /* Info */
 
 #info {
-    background: #d0cdcd;
+    background: #f3eff2;
     padding: 30px 0;
 }
 #info a {
-    color: #1976d2;
-}
-/* https://muffinresearch.co.uk/displaying-a-circle-thats-responsive-in-all-directions/ */
-.info-icon svg {
-    height: 100%;
-}
-.info-icon svg text {
-
-}
-.info-icon svg circle {
-    fill: #f3eff2;
-    stroke-width: 2;
-    stroke: #fff;
-}
-.info-icon svg text {
-    font: normal normal normal 4.5rem FontAwesome;
-    fill: #cd201f;
-}
-.info-icon.youtube svg circle {
-    fill: #CD322E;
-}
-.info-icon.soundcloud svg circle {
-    fill: #f57c00;
-}
-.info-title {
-    text-align: center;
-    font-size: 20px;
     color: #cd201f;
 }
 .info-table {
-    background: #f3eff2;
-    border: 1px solid #BBB;
+    background: #d0cdcd;
     padding: 15px;
 }
 .info-table h4 {
-    color: #1976d2;
+    color: #cd201f;
     text-align: center;
 }
 .info-version {
@@ -493,9 +465,6 @@ img.border-white {
     }
 }
 /* Carousel */
-.features {
-    display: none !important;
-}
 .info .carousel {
 
 }
