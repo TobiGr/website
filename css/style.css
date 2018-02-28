@@ -436,6 +436,10 @@ img.border-white {
     background: #E2DEE0;
     padding: 15px;
 }
+.info-table > .row.is-flex > [class*="col-"] {
+    display: flex;
+    justify-content: stretch;
+}
 .info-table h4 {
     color: #cd201f;
     text-align: center;
@@ -444,6 +448,9 @@ img.border-white {
     text-align: center;
     color: #8c8c8c;
     font-size: 15px;
+}
+.info {
+    flex-grow: 1;
 }
 .info ul {
 
@@ -454,14 +461,41 @@ img.border-white {
 .info-action {
     text-align: center;
     font-size: 25px;
+    padding: 5px 15px;
+}
+@media (max-width: 767px) {
+    .info-table {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .info-table > .row.is-flex > [class*="col-"] {
+        width: 100%;
+        border-top: 15px solid #f3eff2;
+        padding-top: 15px;
+    }
+    .info-table > .row.is-flex > [class*="col-"]:first-child {
+        border-top-width: 0;
+    }
+    .info-action {
+        padding: 15px;
+    }
 }
 @media (min-width: 768px) {
     .info-title {
         font-size: 24px;
     }
-    .info-table .info-middle {
-        border-left: 1px solid #BBB;
-        border-right: 1px solid #BBB;
+    .border-middle {
+        width: 1px;
+        height: calc(100% - 35px);
+        position: absolute;
+        bottom: 0;
+        background: #C0C0C0;
+    }
+    .border-middle.left {
+        left: 0;
+    }
+    .border-middle.right {
+        right: 0;
     }
 }
 /* Carousel */
