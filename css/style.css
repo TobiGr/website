@@ -109,6 +109,12 @@ a:hover, a:focus, a:active {
 img.border-white {
     border: 3px solid white;
 }
+strong.extra {
+    font-size: 125%;
+}
+.separator {
+    border-top: 2px solid white;
+}
 
 
 /* Header */
@@ -704,7 +710,7 @@ img.border-white {
 #features #lightweight .feature-description {
     width: 100% !important;
 }
-#features #lightweight .row.is-flex > [class*="col-"] {
+.container.container-double .row.is-flex > [class*="col-"] {
     display: block;
     margin-bottom: 15px;
 }
@@ -717,19 +723,16 @@ img.border-white {
 #features .feature-description a {
     color: #cd201f;
 }
-#features .feature-description .text-success {
+#features .feature-description .text-success, ul.check > li.text-success {
     color: #29a400;
 }
-#features .feature-description ul {
+#features .feature-description ul > li, ul.check  {
     list-style: none;
-    padding-left: 15px;
-}
-#features .feature-description ul > li {
     padding-left: 15px;
     line-height: 2;
     text-indent: -25px;
 }
-#features .feature-description ul > li:before {
+#features .feature-description ul > li:before, ul.check > li:before {
     content: "\f00c"; /* FontAwesome Unicode for check icon */
     font-family: FontAwesome;
     display: inline-block;
@@ -737,7 +740,7 @@ img.border-white {
     padding-left: 25px;
     height: 100%;
 }
-#features .feature-description ul > li.heart:before {
+#features .feature-description ul > li.heart:before, ul.check > li.heart:before {
     content: "\f004";
 }
 #features .c100 {
@@ -844,23 +847,53 @@ img.border-white {
     padding-bottom: 30px;
     background: #f3eff2;
 }
-.text-2 a {
-    color: #cd201f;
+
+
+/* Tiles */
+
+#tiles {
+    background: #f3eff2;
+    padding-bottom: 30px;
 }
-.text-2 a:hover {
-    text-decoration: none;
+#tiles h3.title {
+    color: #CD201F;
+    text-align: center;
+    margin-bottom: 20px;
 }
-.text-2 .f-droid-wrapper {
-    margin-top: 25px;
-    margin-bottom: 10px
+
+#tiles .tile {
+    background: #E2DEE0;
+    min-height: 200px;
+    padding: 15px 30px;
+    font-size: 16px;
 }
-strong.extra {
-    font-size: 125%;
+#tiles .tile.tile-left {
+    border-right: 7px solid #f3eff2;
 }
-.separator {
-    border-top: 2px solid white;
+#tiles .tile.tile-right {
+    border-left: 7px solid #f3eff2;
 }
-.donate {
+#tiles .tile h4 {
+    text-align: center;
+    color: #CD201F;
+}
+
+#tile-youtube > h4 {
+    color: #CD322E !important;
+}
+#tile-soundcloud > h4 {
+    color: #f57c00 !important;
+}
+#tile-soundcloud > h4 small {
+    font-size: 60%;
+}
+#tile-free ul.check {
+    padding-left:28px;
+}
+
+/* Donate */
+
+button.donate, button.action {
     border: none;
     box-shadow: none;
     background: #cd201f;
@@ -871,36 +904,13 @@ strong.extra {
     font-size: 125%;
     transition: background 0.75s;
 }
-.donate:hover, .donate:focus {
+button.action {
+    padding: 10px 20px;
+    font-size: 100%;
+}
+button.donate:hover, button.donate:focus,
+button.action:hover, button.action:focus {
     background: #AA1D1D;
-}
-#donateBitcoinModal .modal-content {
-    background: #f3eff2;
-}
-#donateBitcoinModal samp {
-    background: #f3eff2;
-    padding: 3px 5px;
-}
-#donateBitcoinModal .modal-footer h4 {
-    margin-top: 6px;
-    margin-bottom: 0;
-}
-#donateBitcoinModal .small {
-    margin-bottom: -5px;
-}
-body.modal-open {
-    overflow-y: scroll;
-    padding-right: 0 !important;
-}
-@media (max-width: 767px){
-    .text-2 {
-        padding-top: 40px;
-        padding-bottom: 30px;
-    }
-    .text-2 .row {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
 }
 #main-page #donate {
     border-top: 3px solid #CD201F;
@@ -914,40 +924,6 @@ body.modal-open {
 }
 #main-page #donate .col-md-4:first-child h3 {
     text-align: right;
-}
-
-/* News */
-
-.news-container {
-    background-color: #d0cdcd;
-    border-top: 2px solid white;
-    color: #333;
-}
-.news-container a {
-    color: #cd201f;
-}
-.news-container h3 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    color: #cd201f;
-}
-.news-container .slides-download {
-    margin-top: 0;
-    margin-bottom: 20px;
-}
-@media (min-width: 768px) {
-    .news-container {
-        border-top: none;
-        padding-top: 0;
-    }
-    .news-container h3 {
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-    .news-container .slides-download {
-        margin-top: 15px;
-        margin-bottom: 20px;
-    }
 }
 
 
