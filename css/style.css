@@ -444,12 +444,13 @@ strong.extra {
     padding: 15px;
 }
 .info-table > .row.is-flex > [class*="col-"] {
-    display: flex;
+    display: flex !important;
     justify-content: stretch;
 }
 .info-table h4 {
     color: #cd201f;
     text-align: center;
+    margin-top: 15px;
 }
 .info-version {
     text-align: center;
@@ -530,10 +531,10 @@ strong.extra {
 @media (min-width: 768px) {
     /* Fixed height to prevent the container
     from jumping when the paragraphs have different heights
-    each line has a height of 20px plus 10px margin-bottom
-    for the last paragraph */
+    each line has a height of 24px plus 10px margin-bottom
+    for the last paragraph. Max number of line: 5 */
     .info .carousel .carousel-inner {
-        height: 90px;
+        height: 130px;
     }
 }
 
