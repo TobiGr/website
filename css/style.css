@@ -429,115 +429,6 @@ strong.extra {
     }
 }
 
-
-/* Info */
-
-#info {
-    background: #f3eff2;
-    padding: 30px 0;
-}
-#info a {
-    color: #cd201f;
-}
-.info-table {
-    background: #E2DEE0;
-    padding: 15px;
-}
-.info-table > .row.is-flex > [class*="col-"] {
-    display: flex !important;
-    justify-content: stretch;
-}
-.info-table h4 {
-    color: #cd201f;
-    text-align: center;
-    margin-top: 15px;
-}
-.info-version {
-    text-align: center;
-    color: #8c8c8c;
-    font-size: 15px;
-}
-.info {
-    flex-grow: 1;
-}
-.info ul {
-
-}
-.info ul > li {
-
-}
-.info-action {
-    text-align: center;
-    font-size: 25px;
-    padding: 5px 15px;
-}
-@media (max-width: 767px) {
-    .info-table {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    .info-table > .row.is-flex > [class*="col-"] {
-        width: 100%;
-        border-top: 15px solid #f3eff2;
-        padding-top: 15px;
-    }
-    .info-table > .row.is-flex > [class*="col-"]:first-child {
-        border-top-width: 0;
-    }
-    .info-action {
-        padding: 15px;
-    }
-}
-@media (min-width: 768px) {
-    .info-title {
-        font-size: 24px;
-    }
-    .border-middle {
-        width: 1px;
-        height: calc(100% - 35px);
-        position: absolute;
-        bottom: 0;
-        background: #C0C0C0;
-    }
-    .border-middle.left {
-        left: 0;
-    }
-    .border-middle.right {
-        right: 0;
-    }
-}
-/* Carousel */
-.info .carousel {
-
-}
-.info .carousel ol.carousel-indicators {
-    position: relative;
-    bottom: 0;
-}
-.info .carousel ol.carousel-indicators > li {
-    border-color: #000;
-    background-color: #000;
-    width: 5px;
-    height: 5px;
-    border-radius: 100%;
-}
-.info .carousel ol.carousel-indicators > li.active {
-    width: 8px;
-    height: 8px;
-}
-.info .carousel .carousel-control {
-    display: none;
-}
-@media (min-width: 768px) {
-    /* Fixed height to prevent the container
-    from jumping when the paragraphs have different heights
-    each line has a height of 24px plus 10px margin-bottom
-    for the last paragraph. Max number of line: 5 */
-    .info .carousel .carousel-inner {
-        height: 130px;
-    }
-}
-
 /* Features */
 
 #features {
@@ -548,6 +439,7 @@ strong.extra {
     color: #cd201f;
     text-align: center;
     margin-bottom: 30px;
+    display: none;
 }
 #features .row.is-flex > [class*='col-'] {
     flex: 1 auto;
@@ -880,12 +772,15 @@ strong.extra {
     padding: 15px 30px;
     font-size: 16px;
 }
-#tiles .tile.tile-left {
-    border-right: 7px solid #f3eff2;
+@media (min-width: 768px) {
+    #tiles .tile.tile-left {
+        border-right: 7px solid #f3eff2;
+    }
+    #tiles .tile.tile-right {
+        border-left: 7px solid #f3eff2;
+    }
 }
-#tiles .tile.tile-right {
-    border-left: 7px solid #f3eff2;
-}
+
 #tiles .tile h4 {
     text-align: center;
     color: #CD201F;
@@ -916,24 +811,162 @@ strong.extra {
     padding-bottom: 30px;
 }
 #tile-opensource .tile-media {
-    max-width: 300px;
-    margin-bottom: 0;
-}
-#tile-opensource .tile-description {
-    max-width: calc(100% - 330px);
-    margin-right: 15px;
-    float: right;
+    display: none;
 }
 #tile-opensource .tile-description h4 {
-    text-align: left;
-    font-size: 24px;
+    margin-bottom: 20px;
 }
+#tile-opensource .button-wrapper {
+    text-align: center;
+    margin-top: 15px;
+}
+#tile-opensource .button-wrapper button {
+    margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+    #tile-opensource .tile-media {
+        max-width: 300px;
+        margin-bottom: 0;
+        display: block;
+    }
+    #tile-opensource .tile-description {
+        max-width: calc(100% - 330px);
+        margin-right: 15px;
+        float: right;
+    }
+    #tile-opensource .tile-description h4 {
+        text-align: left;
+        font-size: 24px;
+    }
+    #tile-opensource .button-wrapper {
+        text-align: left;
+    }
+}
+
+
+
 #tile-opensource button.action {
     margin-right: 15px;
 }
 #tiles {
     line-height: 1.5;
 }
+
+
+/* Info */
+
+#info {
+    padding: 0 !important;
+    background: none !important;
+}
+@media (min-width: 768px) {
+    #info {
+        background: #E2DEE0 !important;
+    }
+}
+#info a {
+    color: #cd201f;
+}
+.info-table {
+    background: #E2DEE0;
+    padding: 15px;
+}
+.info-table > .row.is-flex > [class*="col-"] {
+    display: flex !important;
+    justify-content: stretch;
+}
+.info-table h4 {
+    color: #cd201f;
+    text-align: center;
+    margin-top: 15px;
+}
+.info-version {
+    text-align: center;
+    color: #8c8c8c;
+    font-size: 15px;
+}
+.info {
+    flex-grow: 1;
+}
+.info ul {
+
+}
+.info ul > li {
+
+}
+.info-action {
+    text-align: center;
+    font-size: 25px;
+    padding: 5px 15px;
+}
+@media (max-width: 767px) {
+    .info-table {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .info-table > .row.is-flex > [class*="col-"] {
+        width: 100%;
+        border-top: 15px solid #f3eff2;
+        padding-top: 15px;
+    }
+    .info-table > .row.is-flex > [class*="col-"]:first-child {
+        border-top-width: 0;
+    }
+    .info-action {
+        padding: 15px;
+    }
+}
+@media (min-width: 768px) {
+    .info-title {
+        font-size: 24px;
+    }
+    .border-middle {
+        width: 1px;
+        height: calc(100% - 35px);
+        position: absolute;
+        bottom: 0;
+        background: #C0C0C0;
+    }
+    .border-middle.left {
+        left: 0;
+    }
+    .border-middle.right {
+        right: 0;
+    }
+}
+/* Carousel */
+.info .carousel {
+
+}
+.info .carousel ol.carousel-indicators {
+    position: relative;
+    bottom: 0;
+}
+.info .carousel ol.carousel-indicators > li {
+    border-color: #000;
+    background-color: #000;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+}
+.info .carousel ol.carousel-indicators > li.active {
+    width: 8px;
+    height: 8px;
+}
+.info .carousel .carousel-control {
+    display: none;
+}
+@media (min-width: 768px) {
+    /* Fixed height to prevent the container
+    from jumping when the paragraphs have different heights
+    each line has a height of 24px plus 10px margin-bottom
+    for the last paragraph. Max number of line: 5 */
+    .info .carousel .carousel-inner {
+        height: 130px;
+    }
+}
+
+
 
 /* Donate */
 
@@ -966,9 +999,26 @@ button.action:hover, button.action:focus {
 #main-page #donate .donate {
     border: 3px solid white;
 }
-#main-page #donate .col-md-4:first-child h3 {
-    text-align: right;
+#main-page #donate .col-md-4 {
+    text-align: center;
 }
+#main-page #donate .col-md-4:first-child h3 {
+    margin-bottom: 45px;
+}
+#main-page #donate .col-md-4:last-child h3 {
+    margin-top: 45px;
+}
+@media (min-width: 768px) {
+    #main-page #donate .col-md-4:first-child h3 {
+        text-align: right;
+        margin: 20px 0 10px 0;
+    }
+    #main-page #donate .col-md-4:last-child h3 {
+        text-align: left;
+        margin: 20px 0 10px 0;
+    }
+}
+
 
 
 /* Footer */

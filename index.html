@@ -478,13 +478,45 @@
 
                 <!-- Services -->
                 <div class="col-lg-12">
-                    <h3 class="title">NewPipe supports multiple services!</h3>
+                    <h3 class="title">NewPipe <small>BETA</small> supports multiple services!</h3>
                 </div>
                 <div class="col-md-6 tile tile-left" id="tile-youtube">
                     <h4>YouTube</h4>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    [ YouTube trending | drawer with YouTube enabled ]
                 </div>
                 <div class="col-md-6 tile tile-right" id="tile-soundcloud">
                     <h4>SoundCloud <small>BETA</small></h4>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    ------------------------------<br>
+                    [ SoundCloud "New & Hot" && "Top 50" | drawer ]
                 </div> <!-- services -->
                 <div class="col-md-6 col-md-offset-3 tile" id="tile-costume">
                     <h4>Missing a service?</h4>
@@ -616,7 +648,7 @@
                         <p><strong>Your advantages</strong></p>
                         <ul class="check">
                             <li>Quick help when you have a problem (nobody's ever had one)</li>
-                            <li>Dozens of people bring NewPipe forward and translate it into <a href="https://hosted.weblate.org/engage/NewPipe/">43&nbsp;languages</a>.</li>
+                            <li>Dozens of people bring NewPipe forward and translate it into <a href="https://hosted.weblate.org/engage/NewPipe/"><span class="api-languages">43</span>&nbsp;languages</a>.</li>
                             <li>You can check the sourcecode on <a href="https://github.com/TeamNewPipe/NewPipe">GitHub</a> and contribute to NewPipe.</li>
                             <li>NewPipe is covered by the <a href="https://github.com/TeamNewPipe/NewPipe/blob/master/LICENSE">GPL&nbsp;3.0&nbsp;license</a>.</li>
                             <li>Get NewPipe from <a href="https://f-droid.org/packages/org.schabi.newpipe/">F-Droid</a> and we guarantee that it is generated from the sourcecode.</li>
@@ -624,7 +656,7 @@
                         </ul>
                         <p class="button-wrapper">
                             <a href="https://github.com/TeamNewPipe/NewPipe/"><button class="action">Contribute</button></a>
-                            <a href=""><button class="action"><i class="fa fa-star"></i> <span id="stargazers">3000</span></button></a>
+                            <a href="https://github.com/TeamNewPipe/NewPipe/"><button class="action"><i class="fa fa-star"></i> <span id="stargazers">3000</span></button></a>
                             <a href="https://hosted.weblate.org/engage/NewPipe/"><button class="action">Translate</button></a>
                         </p>
                     </div>
@@ -734,6 +766,40 @@
             $(window).resize(preventJumpingPage);
             preventJumpingPage();
         });
+    </script>
+
+    <script src="/js/github-api-data.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // update versions and changelogs in downlaod section
+
+            document.getElementById("stable-version").innerText =  api.stable.version;
+            document.getElementById("stable-new").innerHTML = api.stable.changelog.substr(0,100);
+
+            document.getElementById("beta-version").innerText =  api.beta.version;
+            document.getElementById("beta-new").innerHTML = api.beta.changelog.substr(0,100);
+
+            // set Open Source data
+
+            document.getElementById("stargazers").innerText = api.githubStats.stars.toString();
+            /*var langs = api.githubStats.languages.toString();
+            var els = document.getElementsByClassName("api-languages");
+            for (var i = 0; i < els.length; i++) {
+                els.item(i).innerText = langs;
+            }*/
+            updateWithAPIData("api-languages",api.githubStats.languages);
+
+            function updateWithAPIData(className, apiData) {
+                var langs = apiData.toString();
+                var els = document.getElementsByClassName(className);
+                for (var i = 0; i < els.length; i++) {
+                    els.item(i).innerText = langs;
+                }
+            }
+        });
+
     </script>
 
     <!-- Load and play animation on medium and large screens -->
