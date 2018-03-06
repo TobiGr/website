@@ -772,6 +772,11 @@ strong.extra {
     padding: 15px 30px;
     font-size: 16px;
 }
+@media (max-width: 767px) {
+    #tiles > .container-double > .row.is-flex > [class*='col-'] {
+        width: 100%;
+    }
+}
 @media (min-width: 768px) {
     #tiles .tile.tile-left {
         border-right: 7px solid #f3eff2;
