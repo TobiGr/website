@@ -827,6 +827,9 @@ strong.extra {
 #tile-opensource .tile-media {
     display: none;
 }
+#tile-opensource .tile-description {
+    margin-left: 0;
+}
 #tile-opensource .tile-description h4 {
     margin-bottom: 20px;
 }
@@ -921,7 +924,7 @@ strong.extra {
     .info-table > .row.is-flex > [class*="col-"] {
         width: 100%;
         border-top: 15px solid #f3eff2;
-        padding-top: 15px;
+        padding: 15px 30px 0 30px;
     }
     .info-table > .row.is-flex > [class*="col-"]:first-child {
         border-top-width: 0;
