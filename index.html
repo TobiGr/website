@@ -780,55 +780,19 @@
     <!-- Script for feature animations -->
     <script src="{{ site.baseurl }}/js/features.js"></script>
 
-    <script src="/js/infoView.js"></script>
+    <script src="{{ site.baseurl }}/js/tiles.js"></script>
 
-    <!-- Info scripts -->
-    <script>
-        /*$(document).ready(function(){
-            $("features2").infoView({
-                view: "#"
-            });
-        });*/
-        $(document).ready(function(){
-            var $fdroid = $("#f-droid-carousel");
-            $fdroid.carousel();
-            var paused = false;
-
-            /**
-             * Prevent jumping page on small screens
-             * caused by a not-fixed height of the F-Droid carousel
-             */
-            function preventJumpingPage() {
-                var w = $(window).width(),
-                    wTop = $(window).scrollTop(),
-                    fTop = $fdroid.offset().top,
-                    fHeight = $fdroid.outerHeight();
-
-                if (w < 768 && !paused && wTop > fTop + fHeight) { // pause cycling when slides are not displayed
-                    paused = true;
-                    $fdroid.carousel('pause');
-                } else if (w < 768 && paused && wTop <= fTop + fHeight // enable cycling when they are displayed
-                    || w >= 768 && paused) { // enable cycling when window got resized
-                    paused = false;
-                    $fdroid.carousel('cycle');
-                }
-            }
-            $(window).scroll(preventJumpingPage);
-            $(window).resize(preventJumpingPage);
-            preventJumpingPage();
-        });
-    </script>
-
-    <script src="/js/github-api-data.js"></script>
+    <script src="{{ site.baseurl }}/js/github-api-data.js"></script>
 
     <script>
         $(document).ready(function () {
 
             // update versions and changelogs in downlaod section
+            
 
             document.getElementById("stable-version").innerText =  api.stable.version;
-            document.getElementById("stable-new").innerHTML = api.stable.changelog.substr(0,100);
-
+            document.getElementById("stable-new").innerHTML = api.stable.changelog.replace("h3","strong").substr(0,100);
+            console.log(api.stable.changelog.replace("h3","strong").substr(0,100));
             document.getElementById("beta-version").innerText =  api.beta.version;
             document.getElementById("beta-new").innerHTML = api.beta.changelog.substr(0,100);
 
