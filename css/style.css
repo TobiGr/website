@@ -670,7 +670,7 @@ strong.extra {
 
 .single-chart {
     max-width: 100px;
-    justify-content: space-around ;
+    justify-content: space-around;
     position: relative;
     transform: rotate(0deg);
     animation-play-state: running;
@@ -685,7 +685,7 @@ strong.extra {
 
 .circle-bg {
     fill: #E2DEE0;
-    stroke: #c5c5c5 ;
+    stroke: #c5c5c5;
     stroke-width: 2.5;
 }
 
@@ -870,6 +870,49 @@ strong.extra {
 }
 
 
+#user-voices.tile {
+    text-align: center;
+    padding-bottom: 35px;
+}
+#user-voices h3 {
+    font-weight: bold;
+}
+#user-voices-carousel .carousel-inner .user-thumbnail {
+    font-size: 100px;
+    min-height: 100px;
+    line-height: 1;
+    margin-top: 15px;
+}
+#user-voices-carousel .carousel-inner .user-name {
+    margin-top: 10px;
+}
+#user-voices-carousel .carousel-inner .user-name a {
+    color: #333;
+}
+#user-voices-carousel .carousel-inner .user-statement {
+    color: #CD201F;
+    font-size: 22px;
+    margin: 15px 0 15px 0;
+}
+#user-voices-carousel ol.carousel-indicators {
+    position: relative;
+    bottom: 0;
+}
+#user-voices-carousel ol.carousel-indicators > li {
+    border-color: #000;
+    background-color: #000;
+    width: 8px;
+    height: 8px;
+    border-radius: 100%;
+}
+#user-voices-carousel ol.carousel-indicators > li.active {
+    width: 10px;
+    height: 10px;
+}
+#user-voices-carousel .carousel-control {
+    display: none;
+}
+
 /* Info */
 
 #info {
@@ -1002,9 +1045,15 @@ button.action {
     padding: 10px 20px;
     font-size: 100%;
 }
+button.action.black {
+    background: black;
+}
 button.donate:hover, button.donate:focus,
 button.action:hover, button.action:focus {
     background: #AA1D1D;
+}
+button.action.black:hover, button.action.black:focus {
+    background: #cd201f;
 }
 #main-page #donate {
     border-top: 3px solid #CD201F;
