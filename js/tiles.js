@@ -4,7 +4,6 @@ $(document).ready(function() {
     var carousels = {0: "user-voices-carousel", 1: "f-droid-carousel"};
     var paused = new Object();
     for (var key in carousels) {
-        console.log(key);
         if (!carousels.hasOwnProperty(key)) continue;
         paused[key] = false;
     }
