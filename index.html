@@ -593,11 +593,11 @@
                             <div class="col-md-4">
                                 <h4>Stable</h4>
                                 <div class="info">
-                                    <p class="info-version" id="stable-version">0.12.0</p>
+                                    <p class="info-version api-stable-version">0.12.0</p>
                                     <p class="text-center"><strong>New</strong></p>
-                                    <ul id="stable-new">
+                                    <div class="api-stable-new">
                                         <li>Blindtext</li>
-                                    </ul>
+                                    </div>
                                 </div>
                                 <p class="info-action">
                                     <a href="https://f-droid.org/packages/org.schabi.newpipe/">
@@ -609,9 +609,9 @@
                             <div class="col-md-4 col-md-push-4">
                                 <h4>Beta</h4>
                                 <div class="info">
-                                    <p class="info-version" id="beta-version">1.0.0</p>
+                                    <p class="info-version api-beta-version">1.0.0</p>
                                     <p class="text-center"><strong>New</strong></p>
-                                    <ul id="beta-new"></ul>
+                                    <div id="api-beta-new"></div>
                                 </div>
                                 <p class="info-action">
                                     <a href="https://f-droid.org/packages/org.schabi.newpipe.beta/">
@@ -693,12 +693,12 @@
                         </a>
                     </div>
                     <div class="tile-description">
-                        <h4>NewPipe is OpenSource</h4>
+                        <h4>NewPipe is free and open source</h4>
 
                         <p><strong>Your advantages</strong></p>
                         <ul class="check">
                             <li>Quick help when you have a problem (nobody's ever had one)</li>
-                            <li>Dozens of people bring NewPipe forward and translate it into <a href="https://hosted.weblate.org/engage/NewPipe/"><span class="api-languages">43</span>&nbsp;languages</a>.</li>
+                            <li>Dozens of people bring NewPipe forward and translate it into <a href="https://hosted.weblate.org/engage/NewPipe/"><span class="api-translations">43</span>&nbsp;languages</a>.</li>
                             <li>You can check the sourcecode on <a href="https://github.com/TeamNewPipe/NewPipe">GitHub</a> and contribute to NewPipe.</li>
                             <li>NewPipe is covered by the <a href="https://github.com/TeamNewPipe/NewPipe/blob/master/LICENSE">GPL&nbsp;3.0&nbsp;license</a>.</li>
                             <li>Get NewPipe from <a href="https://f-droid.org/packages/org.schabi.newpipe/">F-Droid</a> and we guarantee that it is generated from the sourcecode.</li>
@@ -784,40 +784,7 @@
 
     <script src="{{ site.baseurl }}/js/tiles.js"></script>
 
-    <script src="{{ site.baseurl }}/js/github-api-data.js"></script>
-
-    <script>
-        $(document).ready(function () {
-
-            // update versions and changelogs in downlaod section
-            
-
-            document.getElementById("stable-version").innerText =  api.stable.version;
-            document.getElementById("stable-new").innerHTML = api.stable.changelog.replace("h3","strong").substr(0,100);
-            console.log(api.stable.changelog.replace("h3","strong").substr(0,100));
-            document.getElementById("beta-version").innerText =  api.beta.version;
-            document.getElementById("beta-new").innerHTML = api.beta.changelog.substr(0,100);
-
-            // set Open Source data
-
-            document.getElementById("stargazers").innerText = api.githubStats.stars.toString();
-            /*var langs = api.githubStats.languages.toString();
-            var els = document.getElementsByClassName("api-languages");
-            for (var i = 0; i < els.length; i++) {
-                els.item(i).innerText = langs;
-            }*/
-            updateWithAPIData("api-languages",api.githubStats.languages);
-
-            function updateWithAPIData(className, apiData) {
-                var langs = apiData.toString();
-                var els = document.getElementsByClassName(className);
-                for (var i = 0; i < els.length; i++) {
-                    els.item(i).innerText = langs;
-                }
-            }
-        });
-
-    </script>
+    <script src="{{ site.baseurl }}/js/web-api.js"></script>
 
     <!-- Load and play animation on medium and large screens -->
     <script>
