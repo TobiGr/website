@@ -736,6 +736,15 @@ h5, h6,
 #comments h1, #comments h2, #comments h3, #comments h4 {
     font-size: 18px;
 }
+#comments .textarea-wrapper .markdown-info {
+    position: absolute;
+    z-index: 5;
+    font-size: 30px;
+    color: cornflowerblue;
+    bottom: 0;
+    line-height: 0;
+    left: 5px;
+}
 @media (min-width: 767px) {
     .comments-separator {
         width: calc(100% + 15px);
