@@ -1,0 +1,74 @@
+---
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NewPipe - a free YouTube client</title>
+
+    <meta name="author" content="Christian Schabesberger, NewPipe" />
+    <meta name="description" content="Welcome to the Website of NewPipe the lightweight YouTube experience for Android." />
+    <meta name="keywords" content="NewPipe, YouTube, Android" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico" sizes="64x64" />
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/news.rss"/>
+    <link rel="alternate" type="application/atom+xml" title="ATOM" href="/blog/feeds/news.atom"/>
+
+
+    <!-- JQuery -->
+    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+
+    <!-- Bootstrap -->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="{{ site.baseurl }}/js/html5shiv.min.js"></script>
+    <script src="{{ site.baseurl }}/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/font-awesome/css/font-awesome.min.css" />
+
+    <!-- Custom stylesheets -->
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/faq.css" />
+
+</head>
+<body id="faq">
+
+{% include press_nav.html %}
+
+    <div class="site-content height-full-parent">
+        <div class="container container-double">
+            <h3 class="text-center">FAQ and Tutorials</h3>
+            <div id="tiles">
+                <div class="row is-flex">
+                    <!--<div class="col-xs-12">
+                        <h3 class="title">FAQ and Tutorials</h3>
+                    </div>-->
+                    <a href="player/">
+                        <div class="col-md-4 tile tile-left" id="tile-player">
+                            <h2>Player</h2>
+                            <p class="small">Tips and tricks to enjoy the full streaming experience</p>
+                        </div>
+                    </a>
+                    <a href="player/">
+                        <div class="col-md-4 tile" id="tile-download">
+                            <h2>Import / Export<br/>&<br/>Download</h2>
+                        </div>
+                    </a>
+                    <a href="player/">
+                        <div class="col-md-4 tile tile-right" id="tile-player">
+                            <h2>Player</h2>
+                            <p class="small">Tips and tricks to enjoy the full streaming experience</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% include press_footer.html %}
