@@ -57,10 +57,13 @@ body,
     padding: 0;
     cursor: pointer;
 }
-#tiles.faq-tiles .tile > .tile-head > span {
+#tiles.faq-tiles .tile > .tile-head > i {
     padding: 7px 15px;
     display: inline-block;
     border-right: 1px solid #BBB;
+}
+#tiles.faq-tiles .tile > .tile-head > i.fa-graduation-cap {
+    padding: 7px 12px 7px 11px;
 }
 #tiles.faq-tiles .tile > .tile-head > strong {
     padding: 7px 15px;

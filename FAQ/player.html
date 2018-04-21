@@ -8,14 +8,13 @@ layout: no-sidebar
         {% for item in site.faq %}
         <article class="col-md-8 col-md-offset-2 tile">
             <header class="tile-head">
-                <span><i class="fa fa-
-                {%- if item.type == "info" -%}info-circle{%- else if item.type == "tutorial" -%}graduation-cap{%- endif -%}"></i></span>
+                <i class="fa fa-
+                {%- if item.type == "info" -%}info-circle{%- else if item.type == "tutorial" -%}graduation-cap{%- endif -%}"></i>
                 <strong>{{ item.title }}</strong>
             </header>
             <div class="tile-body">
                 {{ item.content }}
             </div>
-
         </article>
         {% endfor %}
     </div>
