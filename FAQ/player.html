@@ -23,7 +23,9 @@ layout: no-sidebar
 
 <script>
     $(".faq-tiles .tile > .tile-head").click(function () {
+        $(this).parent().hasClass("active") ? $(this).parent().find(".tile-body").slideUp() : $(this).parent().find(".tile-body").slideDown();
         $(this).parent().toggleClass("active");
+
     });
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()

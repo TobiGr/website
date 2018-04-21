@@ -67,16 +67,16 @@ body,
 }
 #tiles.faq-tiles .tile > .tile-body {
     display: none;
-    height: 0;
-    overflow: hidden;
+    #height: 0;
+    #overflow: hidden;
     padding: 15px;
-    transition: height 0.5s ease-in-out;
+    #transition: height 0.5s ease-in-out;
     border-top: 1px solid #BBB;
 }
 #tiles.faq-tiles .tile.active > .tile-body {
-    height: auto;
-    display: block;
-    transition: display 0s 0.5s;
+    #height: auto;
+    #display: block;
+    #transition: display 0s 0.5s;
 }
 #tiles.faq-tiles .tile > .tile-body img {
     max-width: 50%;
