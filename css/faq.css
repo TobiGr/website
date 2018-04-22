@@ -23,17 +23,17 @@ body,
     width: 100%;
 }
 #tiles .tile.tile-left {
-    -webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
-    -webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    -moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    -o-border-image: -o-linear-gradient(to right, rgba(187, 187, 187, 1) 2px, rgba(243, 239, 242, 1) 2px) 1 100%;
-    border-image: linear-gradient(to right, rgba(187, 187, 187, 1) 2px, rgba(187, 187, 187, 1) 2px, rgba(243, 239, 242, 1) 2px);
-    border-image-slice: 1 100%;
-    border-image-width: 7px;
-    border-image-outset: unset;
-    border-image-repeat: revert;
+    #-webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    #-webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    #-moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
+    #-o-border-image: -o-linear-gradient(to right, rgba(187, 187, 187, 1) 2px, rgba(243, 239, 242, 1) 2px) 1 100%;
+    #border-image: linear-gradient(to right, rgba(187, 187, 187, 1) 2px, rgba(187, 187, 187, 1) 2px, rgba(243, 239, 242, 1) 2px);
+    #border-image-slice: 1 100%;
+    #border-image-width: 7px;
+    #border-image-outset: unset;
+    #border-image-repeat: revert;
 }
-#faq #tiles .tile:hover {
+#faq #faq-menu #tiles .tile:hover {
     background: #d0cdcd;
     color: #CD201F;
 }
@@ -46,16 +46,16 @@ body,
     text-align: left;
     color: black;
 }
-#tiles.faq-tiles .tile:hover > .tile-body {
-    background: #E2DEE0;
-    color: black;
-}
+
 #tiles.faq-tiles .tile > .tile-head {
     text-align: left;
     color: #CD201F;
     font-size: 16px;
     padding: 0;
     cursor: pointer;
+}
+#tiles.faq-tiles .tile:hover > .tile-head {
+    background: #d0cdcd;
 }
 #tiles.faq-tiles .tile > .tile-head > i {
     padding: 7px 15px;
@@ -67,6 +67,7 @@ body,
 }
 #tiles.faq-tiles .tile > .tile-head > strong {
     padding: 7px 15px;
+    width: calc(100% - 45px);
 }
 #tiles.faq-tiles .tile > .tile-body {
     display: none;
