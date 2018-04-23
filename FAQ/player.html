@@ -3,14 +3,16 @@ layout: no-sidebar
 ---
 <h3><a href="../" data-toggle="tooltip" data-placement="bottom" title='GO back to FAQ & Tutorials'><i class="fa fa-arrow-left"></i></a> FAQ & Tutorials: Player</h3>
 
-<div id="tiles" class="tiles faq-tiles">
+<div class="tiles-container tiles faq-tiles">
     <div class="row">
         {% for item in site.faq %}
         <article class="col-md-8 col-md-offset-2 tile">
             <header class="tile-head">
+                <span class="{{ item.type }}">
                 <i class="fa fa-
-                {%- if item.type == "info" -%}info-circle{%- else if item.type == "tutorial" -%}graduation-cap{%- endif -%}"></i>
-                <strong>{{ item.title }}</strong>
+                    {%- if item.type == "info" -%}info-circle{%- else if item.type == "tutorial" -%}graduation-cap{%- endif -%}"></i>
+                </span>
+                {{ item.title }}
             </header>
             <div class="tile-body">
                 {{ item.content }}
@@ -24,7 +26,6 @@ layout: no-sidebar
     $(".faq-tiles .tile > .tile-head").click(function () {
         $(this).parent().hasClass("active") ? $(this).parent().find(".tile-body").slideUp() : $(this).parent().find(".tile-body").slideDown();
         $(this).parent().toggleClass("active");
-
     });
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()

@@ -44,24 +44,22 @@
     <div id="faq-menu" class="site-content height-full-parent">
         <div class="container container-double">
             <h3 class="text-center">FAQ and Tutorials</h3>
-            <div id="tiles">
+            <div class="tiles-container">
                 <div class="row is-flex">
                     <!--<div class="col-xs-12">
                         <h3 class="title">FAQ and Tutorials</h3>
                     </div>-->
                     <a href="player/" class="col-xs-12 col-sm-6 col-md-4 tile tile-left" id="tile-player">
-                            <h2>Player</h2>
-                            <p class="small">Tips and tricks to enjoy the full streaming experience</p>
+                        <h2>Player</h2>
+                        <p class="small">Tips and tricks to enjoy the full streaming experience</p>
 
                     </a>
                     <a href="player/" class="col-xs-12 col-sm-6 col-md-4 tile" id="tile-download">
-                            <h2>Import / Export<br/>&<br/>Download</h2>
-
+                        <h2>Import / Export<br/>&<br/>Download</h2>
                     </a>
                     <a href="player/" class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-0 tile tile-right" id="tile-player">
-                            <h2>Player</h2>
-                            <p class="small">Tips and tricks to enjoy the full streaming experience</p>
-
+                        <h2>Player</h2>
+                        <p class="small">Tips and tricks to enjoy the full streaming experience</p>
                     </a>
                     <div class="clearfix"></div>
                     <div class="search-container">
@@ -76,14 +74,18 @@
                             </div><!-- /.col-lg-6 -->
                         </div>
                     </div>
-                    <div id="search-results"></div>
-
-                    <!-- Scripts to perform a search -->
-                    <script src="{{ site.baseurl  }}/lunrjs/lunr.min.js"></script>
-                    <script src="{{ site.baseurl  }}/lunrjs/faq_search.js"></script>
                 </div>
+            </div>
+            <div class="tiles-container faq-tiles">
+                <div id="search-results"></div>
+
+                <!-- Scripts to perform a search -->
+                <script src="{{ site.baseurl  }}/lunrjs/lunr.min.js"></script>
+                <script src="{{ site.baseurl  }}/lunrjs/faq_search.js"></script>
+
             </div>
         </div>
     </div>
+
 
 {% include press_footer.html %}
