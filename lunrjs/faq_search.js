@@ -54,6 +54,7 @@ function displaySearchResults(results) {
             var item = window.store[results[i].ref];
             ret += '<article class="col-md-8 col-md-offset-2 tile">\n'
                 + '<header class="tile-head">\n'
+                + '<span class="' + item.type + '">'
                 + '<i class="fa fa-';
             switch (item.type) {
                 case 'info':
@@ -63,11 +64,8 @@ function displaySearchResults(results) {
                     ret += "graduation-cap";
                     break;
             }
-            ret += '"></i>'
-                + '<strong>' + item.title + '</strong>'
-            ret += '<div class="border-box anchor-right-full-parent">'
-                + '<h4><a href="' + item.url + '">' + item.title + '</a></h4>'
-                + '<p><span>' + item.date+ ', by ' + item.author + '</span></p><br>'
+            ret += '"></i></span>'
+                + item.title
                 + '</header>'
                 + '<div class="tile-body">' + item.content + '</div>'
                 + '</article>';
@@ -77,4 +75,12 @@ function displaySearchResults(results) {
     } else {
         searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p><br></div>';
     }
+    clickListener();
+}
+
+function clickListener() {
+    $(".faq-tiles .tile > .tile-head").click(function () {
+        $(this).parent().hasClass("active") ? $(this).parent().find(".tile-body").slideUp() : $(this).parent().find(".tile-body").slideDown();
+        $(this).parent().toggleClass("active");
+    });
 }
