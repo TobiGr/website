@@ -38,7 +38,6 @@
 
 </head>
 <body id="faq">
-
 {% include press_nav.html %}
 
     <div id="faq-menu" class="site-content height-full-parent">
@@ -61,22 +60,24 @@
                         <h2>Player</h2>
                         <p class="small">Tips and tricks to enjoy the full streaming experience</p>
                     </a>
-                    <div class="clearfix"></div>
-                    <div class="search-container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="input-group">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" id="search-submit" type="submit" onclick="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                    </span>
-                                    <input type="text" class="form-control" id="search-box" name="s" placeholder="Search for">
-                                </div><!-- /input-group -->
-                            </div><!-- /.col-lg-6 -->
-                        </div>
-                    </div>
                 </div>
+                <div class="clearfix"></div>
             </div>
             <div class="tiles-container faq-tiles">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6 col-md-offset-3">
+                        <div class="search-container">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="search-box" name="s" placeholder="Search for">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" id="search-submit" type="submit" onclick="search()">
+                                        <i class="fa fa-search" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+                    </div>
+                </div>
                 <div id="search-results"></div>
 
                 <!-- Scripts to perform a search -->

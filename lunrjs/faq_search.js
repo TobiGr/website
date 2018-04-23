@@ -73,8 +73,9 @@ function displaySearchResults(results) {
 
         searchResults.innerHTML = ret;
     } else {
-        searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p><br></div>';
+        searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p></div>';
     }
+    searchResults.classList.add("active");
     clickListener();
 }
 
@@ -84,3 +85,9 @@ function clickListener() {
         $(this).parent().toggleClass("active");
     });
 }
+
+$("#search-box").keydown(function (e) {
+    if (e.keyCode == 13) { // Enter
+        search();
+    }
+});

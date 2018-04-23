@@ -96,3 +96,16 @@ body,
     margin: 0 -15px 10px;
     border-top: 1px solid #bbb;
 }
+#faq .search-container #search-submit,
+#faq .search-container #search-box {
+    background: #E2DEE0;
+    border-radius: 0;
+}
+#faq .search-container #search-box:focus {
+    border: 1px solid #AA1D1D;
+    box-shadow: none;
+}
+#faq #search-results.active {
+    margin-top: 30px;
+}
+
