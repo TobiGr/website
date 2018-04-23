@@ -19,19 +19,30 @@ body,
     min-height: 0;
     border: 1px solid #BBB;
 }
+
 .tiles-container .is-flex > a > div {
     width: 100%;
 }
 .tiles-container .tile.tile-left {
-    .-webkit-border-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
-    #-webkit-border-image: -webkit-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    #-moz-border-image: -moz-linear-gradient(black, rgba(0, 0, 0, 0)) 1 100%;
-    #-o-border-image: -o-linear-gradient(to right, rgba(187, 187, 187, 1) 2px, rgba(243, 239, 242, 1) 2px) 1 100%;
-    #border-image: linear-gradient(to right, rgba(187, 187, 187, 1) 2px, rgba(187, 187, 187, 1) 2px, rgba(243, 239, 242, 1) 2px);
-    #border-image-slice: 1 100%;
-    #border-image-width: 7px;
-    #border-image-outset: unset;
-    #border-image-repeat: revert;
+    border-right: 1px solid #BBB;
+}
+.tiles-container .tile.tile-right {
+    border-left: 1px solid #BBB;
+}
+@media (min-width: 767px) {
+    .tiles-container .is-flex {
+        flex-wrap: nowrap;
+    }
+    .tiles-container .tile.tile-left {
+        margin-right: 10px;
+    }
+    .tiles-container .tile.tile-middle {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .tiles-container .tile.tile-right {
+        margin-left: 10px;
+    }
 }
 #faq #faq-menu .tiles-container .tile:hover {
     background: #d0cdcd;
