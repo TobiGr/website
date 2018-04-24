@@ -1,0 +1,39 @@
+<h3>
+    <a href="../" data-toggle="tooltip" data-placement="bottom" title='GO back to FAQ & Tutorials'>
+        <i class="fa fa-chevron-left"></i>
+    </a>
+    FAQ & Tutorials: {{ include.name }}
+</h3>
+
+<div class="tiles-container tiles faq-tiles">
+    <div class="row">
+        {% for item in site.faq %}
+        {%- for category in item.categories %}
+            {%- if category == include.categories %}
+        <article class="col-md-8 col-md-offset-2 tile">
+            <header class="tile-head">
+                <span class="{{ item.type }}">
+                <i class="fa fa-
+                    {%- if item.type == "info" -%}info-circle{%- else if item.type == "tutorial" -%}graduation-cap{%- endif -%}"></i>
+                </span>
+                {{ item.title }}
+            </header>
+            <div class="tile-body">
+                {{ item.content }}
+            </div>
+        </article>
+            {%- endif %}
+        {%- endfor %}
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+    $(".faq-tiles .tile > .tile-head").click(function () {
+        $(this).parent().hasClass("active") ? $(this).parent().find(".tile-body").slideUp() : $(this).parent().find(".tile-body").slideDown();
+        $(this).parent().toggleClass("active");
+    });
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
