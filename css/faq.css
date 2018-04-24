@@ -48,15 +48,21 @@ h3 > a > i.fa-chevron-left {
         margin-left: 10px;
     }
 }
+#faq #faq-menu .tile {
+    display: flex;
+}
+#faq #faq-menu .tile:hover {
+    background: #d0cdcd;
+    color: #CD201F;
+}
+#faq #faq-menu .tile > div {
+    margin: auto 0;
+}
 #faq #faq-menu .tile > span {
     width: 50px;
     position: absolute;
     top: calc(50% - 1.5em);
     left: calc(50% - 25px);
-}
-#faq #faq-menu .tile:hover {
-    background: #d0cdcd;
-    color: #CD201F;
 }
 #faq #faq-menu .tile > :not(span),
 #faq #faq-menu .tile:hover > span {
