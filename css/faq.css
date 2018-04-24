@@ -10,6 +10,10 @@ body,
     margin-top: 32.5px;
     margin-bottom: 35px;
 }
+h3 > a > i.fa-chevron-left {
+    color: black;
+    font-size: 20px;
+}
 .tiles-container {
     padding: 30px 0;
 }
@@ -44,9 +48,22 @@ body,
         margin-left: 10px;
     }
 }
-#faq #faq-menu .tiles-container .tile:hover {
+#faq #faq-menu .tile > span {
+    width: 50px;
+    position: absolute;
+    top: calc(50% - 1.5em);
+    left: calc(50% - 25px);
+}
+#faq #faq-menu .tile:hover {
     background: #d0cdcd;
     color: #CD201F;
+}
+#faq #faq-menu .tile > :not(span),
+#faq #faq-menu .tile:hover > span {
+    visibility: hidden;
+}
+#faq #faq-menu .tile:hover > :not(span) {
+    visibility: visible;
 }
 .tiles-container #tile-download h2 {
     margin: 20px 0;
@@ -115,6 +132,10 @@ body,
 #faq .search-container #search-box:focus {
     border: 1px solid #AA1D1D;
     box-shadow: none;
+}
+#faq #search-results #search-submit:hover,
+#faq #search-results #search-submit:focus {
+    border-color: #bbb;
 }
 #faq #search-results.active {
     margin-top: 30px;

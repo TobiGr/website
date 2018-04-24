@@ -13,10 +13,9 @@ window.store = {
 };
 
 function search() {
-
-
     searchTerm = document.getElementById('search-box').value;
-    console.log(searchTerm);
+    if (searchTerm.replace(/\s/g, '').length === 0) return;
+
     // Initalize lunr with the fields it will be searching on. I've given title
     // a boost of 10 to indicate matches on this field are more important.
     var idx = lunr(function () {
@@ -37,11 +36,10 @@ function search() {
             'type': window.store[key].type,
             'url': window.store[key].url
         });
-
-        var results = idx.search(searchTerm); // Get lunr to perform a search
-        displaySearchResults(results); // We'll write this in the next section
     }
 
+    var results = idx.search(searchTerm); // Get lunr to perform a search
+    displaySearchResults(results); // We'll write this in the next section
 }
 
 function displaySearchResults(results) {
@@ -75,6 +73,13 @@ function displaySearchResults(results) {
     } else {
         searchResults.innerHTML = '<div id="no-search-results"><br><p class="text-center"><i class="fa fa-3x fa-meh-o" aria-hidden="true"></i><br><br>No results found</p></div>';
     }
+
+    // uncollapse content when there is only one result
+    if (results.length === 1) {
+        $('.faq-tiles .tile').addClass("active");
+        $('.faq-tiles .tile').find(".tile-body").show();
+    }
+
     searchResults.classList.add("active");
     clickListener();
 }
