@@ -66,10 +66,14 @@ h3 > a > i.fa-chevron-left {
 }
 #faq #faq-menu .tile > :not(span),
 #faq #faq-menu .tile:hover > span {
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out 0s;
 }
+#faq #faq-menu .tile > span,
 #faq #faq-menu .tile:hover > :not(span) {
     visibility: visible;
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out 0.3s;
 }
 .tiles-container #tile-download h2 {
     margin: 20px 0;
@@ -129,6 +133,22 @@ h3 > a > i.fa-chevron-left {
 .tiles-container.faq-tiles .tile > .tile-body hr {
     margin: 0 -15px 10px;
     border-top: 1px solid #bbb;
+}
+.tiles-container.faq-tiles .tile > .tile-body figure {
+    display: flex;
+    flex-direction: column;
+}
+.tiles-container.faq-tiles .tile > .tile-body figure img {
+    float: left;
+    margin: 0 auto 15px;
+}
+@media (min-width: 768px) {
+    .tiles-container.faq-tiles .tile > .tile-body figure {
+        flex-direction: row;
+    }
+    .tiles-container.faq-tiles .tile > .tile-body figure img {
+        margin: 0 15px 0 0;
+    }
 }
 #faq .search-container #search-submit,
 #faq .search-container #search-box {
