@@ -3,12 +3,13 @@
 #
 # Include for top navigation bar
 # Following parameters are allowed:
-# brand:    The title will be showed next to the NewPipe logo and the word "NewPipe" on the left side of the nav bar.
+# brand     The title will be showed next to the NewPipe logo and the word "NewPipe" on the left side of the nav bar.
 #           Should be one or two words long.
-# active:   Indicates which item will be bold.
-# position: It is possible to have a navigation which is fixed to the top of the window or
+# brandLink URL to use as link for the brand. Default: #
+# active    Indicates which item will be bold.
+# position  It is possible to have a navigation which is fixed to the top of the window or
 #           to have a static navigation bar. Allowed values: "fixed", "static". Default: "fixed"
-# search:   A search can be integrated next to the first menu entry. Default: false
+# search    A search can be integrated next to the first menu entry. Default: false
 }}
 
 <!-- header -->
@@ -23,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ site.baseurl }}/blog/">
+                    <a class="navbar-brand" href="{% if include.brandLink %}{{ site.baseurl }}/{{ include.brandLink }}{% else %}#{% endif%}">
                         <img src="{{ site.baseurl }}/img/logo.svg" class="img-circle border-white navbar-logo pull-left" />
                         <span class="pull-left">NewPipe{% if include.brand %} {{ include.brand }}{% endif %}</span>
                     </a>

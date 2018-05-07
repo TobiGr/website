@@ -6,7 +6,7 @@
     <title>NewPipe - a free YouTube client</title>
 
     <meta name="author" content="Christian Schabesberger, NewPipe" />
-    <meta name="description" content="Welcome to the Website of NewPipe the lightweight YouTube experience for Android." />
+    <meta name="description" content="Welcome to the website of NewPipe the lightweight YouTube experience for Android." />
     <meta name="keywords" content="NewPipe, YouTube, Android" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
@@ -38,7 +38,8 @@
 
 </head>
 <body id="faq">
-{% include nav.html brand="FAQ" %}
+{%- assign link=site.baseurl | append: "FAQ/" -%}
+{% include nav.html brand="FAQ" brandLink=link %}
 
     <div class="site-content height-full-parent">
         <div class="container container-double">

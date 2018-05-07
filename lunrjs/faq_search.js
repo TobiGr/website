@@ -1,7 +1,8 @@
 ---
 ---
 window.store = {
-{% for item in site.faq %}
+{% assign faqs = site.faq | concat: site.tutorials %}
+{% for item in faqs %}
 "{{ item.title | slugify }}": {
     "title": "{{ item.title | xml_escape }}",
     "url": "{{ item.url | xml_escape }}",
@@ -50,6 +51,8 @@ function displaySearchResults(results) {
 
         for (var i = 0; i < results.length; i++) {  // Iterate over the results
             var item = window.store[results[i].ref];
+            if (item.type === 'tutorial')
+                ret += '<a href="' + item.url + '">';
             ret += '<article class="col-md-8 col-md-offset-2 tile">\n'
                 + '<header class="tile-head">\n'
                 + '<span class="' + item.type + '">'
@@ -64,9 +67,10 @@ function displaySearchResults(results) {
             }
             ret += '"></i></span>'
                 + item.title
-                + '</header>'
-                + '<div class="tile-body">' + item.content + '</div>'
-                + '</article>';
+                + '</header>';
+            if (item.type != 'tutorial') ret += '<div class="tile-body">' + item.content + '</div>';
+            ret += '</article>';
+            if (item.tutorial === 'tutorial') ret += '</a>';
         }
 
         searchResults.innerHTML = ret;
