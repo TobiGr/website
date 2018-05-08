@@ -48,6 +48,9 @@ h3 > a > i.fa-chevron-left {
         margin-left: 10px;
     }
 }
+#faq #faq-menu {
+    padding: 30px 15px 0 15px;
+}
 #faq #faq-menu .tile {
     display: flex;
 }
@@ -74,6 +77,21 @@ h3 > a > i.fa-chevron-left {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.25s ease-in-out 0.3s;
+}
+#faq #faq-menu-tutorials {
+    margin: 0 15px;
+}
+@media (min-width: 992px) {
+    #faq #faq-menu-tutorials article.tile {
+        max-width: 276px;
+        margin-left: 286px;
+    }
+}
+@media (min-width: 1200px) {
+    #faq #faq-menu-tutorials article.tile {
+        max-width: 343px;
+        margin-left: 353px;
+    }
 }
 .tiles-container #tile-download h2 {
     margin: 20px 0;
