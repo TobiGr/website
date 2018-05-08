@@ -61,25 +61,37 @@ h3 > a > i.fa-chevron-left {
 #faq #faq-menu .tile > div {
     margin: auto 0;
 }
-#faq #faq-menu .tile > span {
-    width: 50px;
-    position: absolute;
-    top: calc(50% - 1.5em);
-    left: calc(50% - 25px);
+@media (max-width: 991px) {
+    #faq #faq-menu .tile > span {
+        margin-top: 15px;
+    }
+    #faq #faq-menu .tile > div > h2 {
+        font-size: 24px;
+    }
 }
-#faq #faq-menu .tile > :not(span),
-#faq #faq-menu .tile:hover > span {
-    opacity: 0;
-    transition: opacity 0.25s ease-in-out 0s;
-}
-#faq #faq-menu .tile > span,
-#faq #faq-menu .tile:hover > :not(span) {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.25s ease-in-out 0.3s;
+@media (min-width: 992px) {
+    #faq #faq-menu .tile > span {
+        width: 50px;
+        position: absolute;
+        top: calc(50% - 1.5em);
+        left: calc(50% - 25px);
+    }
+    #faq #faq-menu .tile > :not(span),
+    #faq #faq-menu .tile:hover > span {
+        opacity: 0;
+        transition: opacity 0.25s ease-in-out 0s;
+    }
+
+    #faq #faq-menu .tile > span,
+    #faq #faq-menu .tile:hover > :not(span) {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.25s ease-in-out 0.3s;
+    }
 }
 #faq #faq-menu-tutorials {
     margin: 0 15px;
+    padding: 0;
 }
 @media (min-width: 992px) {
     #faq #faq-menu-tutorials article.tile {
