@@ -3,38 +3,26 @@
     background: none;
 }
 
-#download1 > .row:not(:last-child) {
-    margin-bottom: 10px;
-}
-
 #download1 > .row > [class^="col-"] {
     margin-bottom: 0;
     background: #E2DEE0;
     padding: 10px;
-    border: 1px solid #BBB;
+    border-top: 1px solid #BBB;
+    border-left: 1px solid #BBB;
+}
+
+#download1 > .row > [class^="col-"]:last-child {
+    border-right: 1px solid #BBB;
+}
+
+#download1 > .row:last-child > [class^="col-"] {
+    border-bottom: 1px solid #BBB;
 }
 
 #download1 > .row > .col-md-8 {
     padding: 30px 30px 15px 30px;
 }
 
-@media (min-width: 768px) {
-    #download1 > .row > .col-md-4:first-child {
-        width: calc(4 / 12 * 100 - 15px);
-    }
-
-    #download1 > .row > [class^="col-"]:not(:first-child) {
-        margin-left: 10px;
-    }
-
-    #download1 > .row > .col-md-4:not(:first-child) {
-        width: calc(4 / 12 * 100% - 10px);
-    }
-
-    #download1 > .row > .col-md-8 {
-        width: calc(8 / 12 * 100% - 10px);
-    }
-}
 
 .download-provider-container {
     text-align: center;
