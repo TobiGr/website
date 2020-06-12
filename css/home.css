@@ -3,6 +3,15 @@
     background: none;
 }
 
+/*@media (max-width: 767px) {
+    .tile.tile-bordered > .row.is-flex > [class^="col-"] {
+        width: 100%;
+    }
+    .tile.tile-bordered > .row.is-flex > .col-sm-6 {
+        width: 50%;
+    }
+}*/
+
 .tile.tile-bordered > .row > [class^="col-"],
 .tile.tile-bordered > .row.is-flex > [class^="col-"] {
     margin-bottom: 0;
@@ -10,10 +19,14 @@
     padding: 10px;
     border-top: 1px solid #BBB;
     border-left: 1px solid #BBB;
+    /*width: 100%;*/
 }
 
-.tile.tile-bordered > .row > [class^="col-"]:last-child {
+.tile.tile-bordered > .row > [class^="col-"] {
     border-right: 1px solid #BBB;
+}
+.tile.tile-bordered > .row > .col-sm-6:nth-child(2n+1) {
+    border-right: 0;
 }
 
 .tile.tile-bordered > .row:last-child > [class^="col-"] {
@@ -68,8 +81,27 @@
 
 #download1 .carousel .carousel-control.left,
 #download1 .carousel .carousel-control.right {
-    background: none;
     display: none;
+    color: black;
+    opacity: 1;
+}
+
+#download1 .carousel:hover .carousel-control.left {
+    background: linear-gradient(to right, rgba(226,222,224,1) 0%, rgba(226,222,224,0.5) 75%, rgba(226,222,224,0) 100%);
+    display: initial;
+}
+
+#download1 .carousel:hover .carousel-control.right {
+    background: linear-gradient(to left, rgba(226,222,224,1) 0%, rgba(226,222,224,0.5) 75%, rgba(226,222,224,0) 100%);
+    display: initial;
+}
+
+#download1 .carousel .carousel-control.left:hover {
+    background: linear-gradient(to right, rgba(226,222,224,1) 0%, rgba(226,222,224,0.8) 75%, rgba(226,222,224,0.5) 100%);
+}
+
+#download1 .carousel .carousel-control.right:hover {
+    background: linear-gradient(to left, rgba(226,222,224,1) 0%, rgba(226,222,224,0.8) 75%, rgba(226,222,224,0.5) 100%);
 }
 
 #download1 .carousel .carousel-indicators {
@@ -88,16 +120,92 @@
     width: 10px;
     height: 10px;
 }
-
+#download-newpipe-qr-code-container-col {
+    display: none;
+}
 #download-newpipe-qr-code-container {
     width: 100%;
 }
 
 @media (min-width: 768px) {
+    #download-newpipe-qr-code-container-col {
+        display: block;
+    }
     #download-newpipe-qr-code-container img {
         max-width: 12.5em;
+    }
 
+    /* align "read more" button with "download NewPipe Legacy" button */
+    /* <bad code> */
+    #download1 .download-info-container {
+        /* 100% - height of heading - padding bottom of .download-version-container */
+        height: calc(100% - 29.8px - 15px);
+    }
+    #download1 .download-info-content {
+        height: 100%;
+    }
+    #download-info-changelog,
+    #download-info-help {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    /* </bad code> */
+}
+
+@media (min-width: 992px) {
+    /* Re-order grid on medium and larger devices */
+    /* Just as a British Speaker used to call in a very honourable house:Oooooorder! */
+    #download1 .row.is-flex > [class^="col-"]:nth-child(1) {
+        order: 1;
+        border-bottom: 0;
+    }
+    #download1 .row.is-flex > [class^="col-"]:nth-child(2) {
+        order: 3;
+    }
+    #download1 .row.is-flex > [class^="col-"]:nth-child(3) {
+        order: 2;
+        border-right: 1px solid #BBB;
+        border-bottom: 0;
+    }
+    #download1 .row.is-flex > [class^="col-"]:nth-child(4) {
+        order: 4;
+    }
+    #download1 .row.is-flex > [class^="col-"]:nth-child(5) {
+        order: 5;
     }
 }
 
+#get-started .row > [class^="col-"] {
+    padding: 10px 30px;
+}
+#get-started .row.is-flex > [class^="col-"] {
+    padding: 30px;
+}
 
+@media (min-width: 768px) {
+    #get-started .row.is-flex > a[class^="col-"] {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    /* Re-order grid on medium and larger devices */
+    #get-started .row.is-flex > [class^="col-"]:nth-child(1) {
+        order: 1;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(2) {
+        order: 4;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(3) {
+        order: 2;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(4) {
+        order: 5;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(5) {
+        order: 3;
+    }
+    #get-started .row.is-flex > [class^="col-"]:nth-child(6) {
+        order: 6;
+    }
+}

@@ -474,9 +474,9 @@
                     </div>
                 </div>
 
-                <div class="col-xs-12">
+                <!--<div class="col-xs-12">
                     <hr class="separator hidden-md" />
-                </div>
+                </div>-->
 
                 <!-- Download -->
                 <div class="col-xs-12">
@@ -485,7 +485,7 @@
 
                 <div class="col-xs-12 tile tile-bordered" id="download1">
                     <div class="row is-flex">
-                        <div class="col-md-4">
+                        <div class="col-xs-6 col-sm-6 col-md-4">
                             <div class="download-version-container">
                                 <div class="download-version-icon">
                                     <img src="img/logo_app.svg" class="img-responsive" />
@@ -500,7 +500,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-xs-6 col-sm-6 col-md-4">
+                            <div class="download-version-container">
+                                <div class="download-version-icon">
+                                    <img src="img/logo_app.svg" class="img-responsive" />
+                                </div>
+                                <div class="download-version-requirements">
+                                    Android 4.1+
+                                </div>
+                                <div class="download-version-button">
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/#latest">
+                                        <button class="action"><i class="fa fa-download"></i> NewPipe legacy 0.19.5</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-8">
                             <div id="download-info-carousel-container">
                                 <div id="f-droid-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
 
@@ -516,19 +531,28 @@
                                         </div>
                                         <div class="item">
                                             <div class="row is-flex">
-                                                <div class="col-lg-4">
+                                                <div class="col-md-5 col-lg-4" id="download-newpipe-qr-code-container-col">
                                                     <div id="download-newpipe-qr-code-container">
                                                         <a href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">
                                                             <img src="https://f-droid.org/assets/download-fdroid-qr.png" class="img-responsive" alt="URL to our F-Droid repo"/>
                                                         </a>
                                                     </div>
                                                 </div>
-                                                <div class="col-lg-8">
+                                                <div class="col-md-7 col-lg-8">
                                                     <div style="margin: auto;">
                                                         <p>You can also add our F-Droid repository to your client to receive updates even faster.</p>
                                                         <!--<p><strong>Repository fingerprint:</strong></p>
                                                         <pre style="white-space: pre-line">E240 2C78 F9B9 7C6C 89E9 7DB9 14A2<br class="hidden-xs hidden-sm"> 751F DA1D 02FE 2039 CC08 97A4 62BD<br class="hidden-xs hidden-sm"> B57E 7501</pre>-->
-                                                        <p><a style="word-wrap: break-word;" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501</a></p>
+                                                        <p><a style="word-wrap: break-word;word-wrap: anywhere;" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501">https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501</a></p>
+                                                        <div class="hidden-md hidden-lg">
+                                                            <p id="f-droid-qr-code-toggle"><i class="fa fa-chevron-right"></i> <span class="f-droid-qr-code-toggled shown">Show</span><span class="f-droid-qr-code-toggled hidden">Hide</span> QR-code</p>
+                                                            <p class="text-center">
+                                                                <a id="f-droid-repo-qr-code" href="https://archive.newpipe.net/fdroid/repo/?fingerprint=E2402C78F9B97C6C89E97DB914A2751FDA1D02FE2039CC0897A462BDB57E7501" class="hidden f-droid-qr-code-toggled" style="display: inline-block">
+                                                                    <img src="https://f-droid.org/assets/download-fdroid-qr.png" class="img-responsive" alt="URL to our F-Droid repo"/>
+                                                                </a>
+                                                            </p>
+                                                        </div>
+                                                        <p><a href="#">Learn more</a></p>
 
                                                     </div>
                                                 </div>
@@ -557,25 +581,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="row is-flex">
-                        <div class="col-md-4">
-                            <div class="download-version-container">
-                                <div class="download-version-icon">
-                                    <img src="img/logo_app.svg" class="img-responsive" />
-                                </div>
-                                <div class="download-version-requirements">
-                                    Android 4.1+
-                                </div>
-                                <div class="download-version-button">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/#latest">
-                                        <button class="action"><i class="fa fa-download"></i> NewPipe legacy 0.19.5</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-12 col-sm-12 col-md-4">
                             <div class="download-info-container">
                                 <div class="download-info-heading">
                                     <h4>Changelog</h4>
@@ -587,11 +593,13 @@
                                             <li>Awesome change</li>
                                             <li>We love NewPipe</li>
                                         </ul>
+                                        <p class="text-center"><a href="{{ post_url 2020-05-03-newpipe-0.19.3-released }}"><button class="action black">Blog post</button></a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-xs-12 col-sm-12 col-md-4">
                             <div class="download-info-container">
                                 <div class="download-info-heading">
                                     <h4>Need help?</h4>
@@ -603,7 +611,7 @@
                                             <li>Do you have problems updating?</li>
                                         </ul>
                                         <p class="text-center"><a href="">
-                                            <button class="action">Read more</button>
+                                            <button class="action black">Read more</button>
                                         </a></p>
                                     </div>
                                 </div>
@@ -625,32 +633,30 @@
                         </div>
                     </div>
                     <div class="row is-flex">
-                        <div class="col-md-4">
+                        <div class="col-xs-12 col-md-4">
                             <div class="content">
                                 Set up NewPipe to work best with your conditions.
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <a class="col-xs-12 col-md-4" href="#"><i class="fa fa-caret-right"></i> First steps</a>
+                        <div class="col-xs-12 col-md-4">
                             <div class="content">
                                 Are you low on mobile data and have no WiFi?<br>We show you how to save data with NewPipe
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <a class="col-xs-12 col-md-4" href="#"><i class="fa fa-caret-right"></i> Save Data</a>
+                        <div class="col-xs-12 col-md-4">
                             <div class="content">
                                 NewPipe has a bunch of hidden features.<br>Don't believe us?<br>Check it out!
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <a class="col-md-4" href="#">First steps</a>
-                        <a class="col-md-4" href="#">Save Data</a>
-                        <a class="col-md-4" href="#">Learn more</a>
+                        <a class="col-xs-12 col-md-4" href="#"><i class="fa fa-caret-right"></i> Learn more</a>
                     </div>
                     <div class="row text-center border-none">
-                        <a class="col-md-6" href="#">
+                        <a class="col-xs-6 col-md-6" href="#">
                             <i class="fa fa-chevron-right"></i> Tutorials
                         </a>
-                        <a class="col-md-6" href="#">
+                        <a class="col-xs-6 col-md-6" href="#">
                             <i class="fa fa-chevron-right"></i> FAQ
                         </a>
                     </div>
@@ -773,6 +779,14 @@
             });
             downloadFdroidSwiper.run();
         }
+
+        // collapse qr-code
+        $(document).ready(function () {
+            $('#f-droid-qr-code-toggle').click(function () {
+                $('.f-droid-qr-code-toggled').toggleClass('shown');
+                $('.f-droid-qr-code-toggled').toggleClass('hidden');
+            });
+        });
     </script>
 
     <!-- Load and play animation on medium and large screens -->
