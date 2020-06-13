@@ -127,6 +127,12 @@
     width: 100%;
 }
 
+@media (max-width: 991px) {
+    #download1 .row.is-flex > [class^="col-"]:nth-child(n+3) {
+        border-top-width: 0;
+    }
+}
+
 @media (min-width: 768px) {
     #download-newpipe-qr-code-container-col {
         display: block;
@@ -144,6 +150,9 @@
     #download1 .download-info-content {
         height: 100%;
     }
+    #download1 .download-info-content .button-small {
+        margin-bottom: 5px;
+    }
     #download-info-changelog,
     #download-info-help {
         height: 100%;
@@ -159,10 +168,11 @@
     /* Just as a British Speaker used to call in a very honourable house:Oooooorder! */
     #download1 .row.is-flex > [class^="col-"]:nth-child(1) {
         order: 1;
-        border-bottom: 0;
+        border-bottom: none;
     }
     #download1 .row.is-flex > [class^="col-"]:nth-child(2) {
         order: 3;
+        border-right: none;
     }
     #download1 .row.is-flex > [class^="col-"]:nth-child(3) {
         order: 2;
@@ -171,6 +181,7 @@
     }
     #download1 .row.is-flex > [class^="col-"]:nth-child(4) {
         order: 4;
+        border-right: none;
     }
     #download1 .row.is-flex > [class^="col-"]:nth-child(5) {
         order: 5;
@@ -183,12 +194,12 @@
 #get-started .row.is-flex > [class^="col-"] {
     padding: 30px;
 }
+#get-started .row.is-flex > a[class^="col-"] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 @media (min-width: 768px) {
-    #get-started .row.is-flex > a[class^="col-"] {
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
     /* Re-order grid on medium and larger devices */
     #get-started .row.is-flex > [class^="col-"]:nth-child(1) {
         order: 1;

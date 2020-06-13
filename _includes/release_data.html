@@ -1,0 +1,15 @@
+{{
+# We cannot use a data file for two reasons:
+# 1. We'd need to escape every single '>' in the changelog
+# 2. We cannot use Liquid tags to generate the post URL and therefore would be required to put in an absolute URL
+}}
+{%- capture releaseChangelog -%}
+<ul>
+    <li>hhh</li>
+    <li>mmmm</li>
+</ul>
+{%- endcapture -%}
+
+{%- capture releasePostUrl -%}
+    {%- post_url 2020-05-03-newpipe-0.19.3-release -%}
+{%- endcapture -%}

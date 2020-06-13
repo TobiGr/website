@@ -1,6 +1,8 @@
 ---
 
 ---
+{%- include release_data.html -%}
+
 {%- include head.html
             bodyID = "main-page"
             extraCSS = "home.css"
@@ -474,10 +476,6 @@
                     </div>
                 </div>
 
-                <!--<div class="col-xs-12">
-                    <hr class="separator hidden-md" />
-                </div>-->
-
                 <!-- Download -->
                 <div class="col-xs-12">
                     <h3 class="title">Get NewPipe</h3>
@@ -494,8 +492,8 @@
                                     Android 4.4+
                                 </div>
                                 <div class="download-version-button">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/#latest">
-                                        <button class="action"><i class="fa fa-download"></i> NewPipe 0.19.5</button>
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/#latest" class="button action">
+                                        <i class="fa fa-download"></i> NewPipe 0.19.5
                                     </a>
                                 </div>
                             </div>
@@ -509,8 +507,8 @@
                                     Android 4.1+
                                 </div>
                                 <div class="download-version-button">
-                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/#latest">
-                                        <button class="action"><i class="fa fa-download"></i> NewPipe legacy 0.19.5</button>
+                                    <a href="https://f-droid.org/packages/org.schabi.newpipe/#latest" class="button action">
+                                        <i class="fa fa-download"></i> NewPipe legacy 0.19.5
                                     </a>
                                 </div>
                             </div>
@@ -552,7 +550,7 @@
                                                                 </a>
                                                             </p>
                                                         </div>
-                                                        <p><a href="#">Learn more</a></p>
+                                                        <p><a class="button button-small action grey" href="#">Learn more</a></p>
 
                                                     </div>
                                                 </div>
@@ -588,13 +586,8 @@
                                 </div>
                                 <div class="download-info-content">
                                     <div id="download-info-changelog">
-                                        <ul>
-                                            <li>Very important thing</li>
-                                            <li>Awesome change</li>
-                                            <li>We love NewPipe</li>
-                                        </ul>
-                                        <p class="text-center"><a href="{{ post_url 2020-05-03-newpipe-0.19.3-released }}"><button class="action black">Blog post</button></a>
-                                        </p>
+                                        {{ releaseChangelog }}
+                                        <p class="text-center"><a href="{{ releasePostUrl }}" class="button button-small action grey">Blog post</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -610,9 +603,10 @@
                                             <li>Did you enable unknown sources?</li>
                                             <li>Do you have problems updating?</li>
                                         </ul>
-                                        <p class="text-center"><a href="">
-                                            <button class="action black">Read more</button>
-                                        </a></p>
+                                        <p class="text-center">
+                                            <!--<a href="#" class="button button-small action grey">Read more</a>-->
+                                            <a href="#" class="button button-small action grey">First steps</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -689,7 +683,7 @@
                             <a href="https://github.com/TeamNewPipe/NewPipe/blob/dev/.github/CONTRIBUTING.md#newpipe-contribution-guidelines" class="button action">Contribute</a>
                             <a href="https://github.com/TeamNewPipe/NewPipe/" class="button action"><i class="fa fa-star"></i> <span class="api-stargazers">8000+</span></a>
                             <a href="https://hosted.weblate.org/engage/NewPipe/" class="button action">Translate</a>
-                            <a href="https://github.com/TeamNewPipe/website/" class="button action black" >Improve this site</a>
+                            <a href="https://github.com/TeamNewPipe/website/" class="button action grey" >Improve this site</a>
                         </p>
                     </div>
                 </div>
@@ -782,9 +776,10 @@
 
         // collapse qr-code
         $(document).ready(function () {
+            let $qrCodeToggled = $('.f-droid-qr-code-toggled');
             $('#f-droid-qr-code-toggle').click(function () {
-                $('.f-droid-qr-code-toggled').toggleClass('shown');
-                $('.f-droid-qr-code-toggled').toggleClass('hidden');
+                $qrCodeToggled.toggleClass('shown');
+                $qrCodeToggled.toggleClass('hidden');
             });
         });
     </script>
