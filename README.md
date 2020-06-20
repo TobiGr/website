@@ -149,3 +149,20 @@ Writing short FAQs is quite easy and there are only few things to consider.
 2. To separate parts of your article with a thin line, use `<hr/>` tags. 
 3. To insert images, use the `<img/>` tag inside of a `<figure>` tag. Additionally, each image needs a caption (`<figcaption>`).
 4. Please keep your sentences as shorts as possible. This makes it easier to follow you and your instructions.
+
+#### Usage of WEB-API
+We have an API which provides data for running the website to circumvent contacting other servers when visiting our website.
+You can find its source code [at GitHub](https://github.com/TeamNewPipe/web-api) and the served data [here](https://newpipe.schabi.org/api/data.json).
+
+To use API data, you need to add the `data-newpipe-api` attribute to a HTML tag containing the JSON identifier of the value you want to access:
+
+``` HTML
+<p>NewPipe has <span data-newpipe-api="stats.stargazers></span> stars on GitHub.</p>"
+```
+
+By default, the inner HTML of tags which have the `data-newpipe-api` attribute will be replaced with the requested value.
+It is also possible to not replace the HTML, but store the API data in an referred attribute by adding the `ata-newpipe-api-attribute` attribute:
+
+``` HTML
+<a data-newpipe-api="flavors.fdroid.stable.apk" data-newpipe-api-attribute="href">download NewPipe</a>
+```
